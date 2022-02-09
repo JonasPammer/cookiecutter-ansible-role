@@ -13,7 +13,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pip3 install --no-cache-dir ansible ansible-lint yamllint",
+	"postCreateCommand": "",
 
 
 	// Set *default* container specific settings.json values on container create.
