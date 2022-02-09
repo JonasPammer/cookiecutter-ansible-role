@@ -1,0 +1,69 @@
+= Cookiecutter Ansible Role
+Jonas Pammer <opensource@jonaspammer.at>;
+:toc:
+:toclevels: 3
+:toc-placement!:
+
+https://cookiecutter.readthedocs.io/en/1.7.2/installation.html[
+Install CookieCutter] (e.g. using `pip3 install --user cookiecutter`)
+and issue the following command in the parent directory of this folder
+to get started:
+
+[subs="+quotes,attributes"]
+----
+user@machine:~/dev$ *cookiecutter https://github.com/JonasPammer/cookiecutter-ansible-role.git*
+----
+
+== Features
+
+* Awesome README in Asciidoctor Format
+* Beginner-Friendly CONTRIBUTING file inspired by https://github.com/auth0/open-source-template/blob/master/GENERAL-CONTRIBUTING.md[
+  Auth0's Open Source Template]
+* Beginner-Friendly Development Documentation
+* https://code.visualstudio.com/docs/remote/containers[Visual Studio Code Development Container Definitions]
+* Basic https://pre-commit.com/[pre-commit] hooks
+* https://yamllint.readthedocs.io/en/stable/configuration.html#default-configuration[
+  `yamllint`] (enforced through pre-commit and checked by CI)
+* https://gist.github.com/JonasPammer/4ea577854ae10afe644bff366d7b2a8a[
+  Conventional Commit] enforcement through pre-commit, assuming the dev activated it.
+* Basic `.gitignore` including rules for VisualStudioCode, JetBrains, VirtualEnv, Linux, Ansible, SVN, Windows and macOS
+* `.gitattributes` ensuring LF as checked by yamllint
+
+=== Ansible
+
+* Includes all Files and Folders expected to be found in an Ansible Role. 
+* Every Ansible file starts with a conventional comment containing the name of the role and the purpose of the file
+* Ansible Galaxy meta information
+* Molecule Converge Definition with Docker and systemd-enabled Images
+* Single `vars/main.yml` instead of per-distribution file and include task
++
+[source,yaml]
+----
+_rolename_os_specific_var:app-name:
+    Alpine: …
+    Debian: …
+    Debian_9: …
+
+rolename_os_specific_var: "{{ 
+    _rolename_packages[ansible_distribution ~'_'~ ansible_distribution_major_version]|default(
+    _rolename_packages[ansible_distribution] )|default(
+    _rolename_packages[ansible_os_family] ) }}"
+----
+
+=== GitHub
+
+[NOTE]
+====
+The resulting projects mentions that `pre-commit` installation is optional,
+as it is assumed that the project is included in your `pre-commit.ci` account projects.
+====
+
+* GitHub Issue Form YAML Templates for filing bug reports and feature requests using HTML forms
+* GitHub Pull Request Markdown Template
+* GitHub Workflow to release to Ansible Galaxy
++
+[NOTE]
+*Requires* a `GALAXY_API_KEY` secret present in the GitHub repository or organization!
+* Continuous GitHub Workflow to `yamllint` / `ansiblelint` all files
+* Continuous GitHub Workflow to run `molecule` test's on a matrix of different OS's (with systemd support)
+* GitHub Workflow to turn `TODO` 's into GitHub Issues

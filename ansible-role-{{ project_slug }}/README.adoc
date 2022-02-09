@@ -1,0 +1,155 @@
+= ansible-role-{{ cookiecutter.role_name }}
+{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>;
+:toc:
+:toclevels: 3
+:toc-placement!:
+
+ifdef::env-github[]
+// https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74#admonitions
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/ci.yml[image:https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/ci.yml/badge.svg[Testing CI]]
+https://results.pre-commit.ci/latest/github/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/master[image:https://results.pre-commit.ci/badge/github/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/master.svg[pre-commit.ci status]]
+
+https://conventionalcommits.org[image:https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg[Conventional Commits]]
+// image:https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white[pre-commit, link=https://github.com/pre-commit/pre-commit]
+
+An Ansible role for {{ cookiecutter.project_short_purpose }}.
+
+
+toc::[]
+
+
+[[meta]]
+== 🔎 Metadata
+Below you can find information on…
+
+* the role's required Ansible version
+* the role's supported platforms
+* the role's https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html#role-dependencies[role dependencies]
+
+.link:meta/main.yml[]
+[source,yaml]
+----
+include::meta/main.yml[]
+----
+
+
+[[requirements]]
+== 📌 Requirements
+// Any prerequisites that may not be covered by this role or Ansible itself should be mentioned here.
+{%- if cookiecutter.ansible_user_needs_to_become %}
+User needs to be able to `become`.
+{% endif %}
+
+
+[[variables]]
+== 📜 Role Variables
+// A description of the settable variables for this role should go here
+// and any variables that can/should be set via parameters to the role.
+// Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.)
+// should be mentioned here as well.
+
+[source,yaml]
+----
+variable: default value
+----
+Description
+
+
+[source,yaml]
+----
+variable: [OS-specific by default, see /vars directory]
+----
+Description
+
+
+[source,yaml]
+----
+variable: [OS-specific by default, see /vars directory]
+----
+(Debian/Ubuntu only)
+Description
+
+
+[[dependencies]]
+== ⛓️ Dependencies
+// A list of other roles should go here,
+// plus any details in regard to parameters that may need to be set for other roles,
+// or variables that are used from other roles.
+
+
+[[example_playbooks]]
+== 📚 Example Playbook Usages
+// Including examples of how to use this role in a playbook for common scenarios is always nice for users too:
+
+.Description of Example
+====
+[source,yaml]
+----
+roles:
+    - "{{ cookiecutter.galaxy_user }}.{{ cookiecutter.role_name }}"
+
+vars:
+    some_var: "some_value"
+----
+====
+
+
+[[development]]
+== 💪 Development
+
+[[development--versioning]]
+=== 📦 Versioning
+
+Versions are defined using https://git-scm.com/book/en/v2/Git-Basics-Tagging[Tags],
+which in turn are https://galaxy.ansible.com/docs/contributing/version.html[recognized and used] by Ansible Galaxy.
+
+When a new tag is pushed, https://github.com/{{ cookiecutter.github_name }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/release.yml[
+a GitHub CI workflow] takes care of importing the role to my Ansible Galaxy Account.
+image:https://github.com/{{ cookiecutter.github_name }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/release.yml/badge.svg[Release CI]
+
+[[development--environment]]
+=== 🧃 Recommended Development Environment https://open.vscode.dev/{{ cookiecutter.github_name }}/ansible-role-{{ cookiecutter.role_name }}[image:https://open.vscode.dev/badges/open-in-vscode.svg[Open in Visual Studio Code]]
+
+The _Visual Studio Code Remote - Containers_ extension lets one use a Docker container
+as a full-featured development environment.
+
+This Project offers such a devcontainer definition.
+By looking at its docker-compose and dockerfile definition,
+one can inform himself about everything there is to know about
+how to setup the required / recommended development environment,
+*even if you do not use this editor in combination with this feature*.
+
+To use it:
+
+1. Install and configure https://www.docker.com/get-started[Docker] for your operating system.
+2. Install https://code.visualstudio.com/[Visual Studio Code]
+3. Install the https://aka.ms/vscode-remote/download/extension[Remote Development extension pack.]
+4. Issue the VS Code command `Remote-Containers: Reopen in Container` (e.g. by pressing F1, *or* clicking on the icon found on the most left in the lower status bar) to activate the environment.
++
+image:https://code.visualstudio.com/assets/docs/remote/containers/remote-containers-reopen.png[]
+5. You may need to configure your host system to enable the container to use your SSH Keys.
+   The procedure is described https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container[in the official devcontainer docs under "Sharing Git credentials with your container"].
+
+Once you've opened a folder in a container, any terminal window you open in VS Code (Terminal > New Terminal) will automatically run in the container rather than locally.
+
+=== 💁 Tips
+
+// TODO Add Link to my general ansible role development guideline docs once they're finished
+//  assignees: {{ cookiecutter.github_name }}
+Take a look at my general ansible role development guidelines at .
+
+
+== 💪 Contributing
+include::CONTRIBUTING.adoc[]
+
+
+[[changelog]]
+== 📝 Changelog
+include::CHANGELOG.adoc[]

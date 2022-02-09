@@ -1,0 +1,14 @@
+---
+version: '3.6'
+services:
+  vscode-env:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VARIANT: focal
+    container_name: {{ cookiecutter.galaxy_name }}-ansible-role-{{ cookiecutter.role_name }}
+    volumes:
+      # Mount the workspace files into /vscode
+      - ..:/vscode
+    tty: true

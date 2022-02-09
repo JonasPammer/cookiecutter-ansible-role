@@ -1,0 +1,39 @@
+{
+	"name": "{{ cookiecutter.github_name }}/ansible-role-{{ cookiecutter.role_name }}",
+
+	"dockerComposeFile": "./docker-compose.yml",
+	"service": "vscode-env",
+	"remoteUser": "vscode",
+	"workspaceFolder": "/vscode",
+	"features": {
+		"github-cli": "latest",
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pip3 install --no-cache-dir ansible ansible-lint yamllint",
+
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		// ## Ansible Development ##
+		"redhat.ansible",
+		"redhat.vscode-yaml",
+		"wholroyd.jinja",
+		"samuelcolvin.jinjahtml",
+		
+		// ## General ##
+		"ms-azuretools.vscode-docker",
+		"asciidoctor.asciidoctor-vscode",
+		"Gruntfuggly.todo-tree",
+		"eamodio.gitlens",
+		"donjayamanne.githistory",
+		"mhutchie.git-graph",
+		// "mutantdino.resourcemonitor"
+	]
+}

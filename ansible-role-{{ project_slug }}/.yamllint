@@ -1,0 +1,6 @@
+---
+extends: default  # https://yamllint.readthedocs.io/en/stable/configuration.html#default-configuration
+
+rules:
+  line-length:
+    max: 140

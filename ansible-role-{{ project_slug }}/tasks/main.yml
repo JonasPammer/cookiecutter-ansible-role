@@ -1,0 +1,7 @@
+---
+# tasks file for roles/{{ cookiecutter.role_name }}
+
+- name: check if all variables have been set correctly
+  ansible.builtin.import_tasks: assert.yml
+  run_once: yes
+  delegate_to: localhost

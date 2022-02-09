@@ -1,0 +1,24 @@
+// Changelog for ansible-role "{{ cookiecutter.galaxy_user }}.{{ cookiecutter.role_name }}"
+// Included in README.adoc
+:toc:
+
+[subs="+macros"]
+----
+The following Changelog format was inspired by https://keepachangelog.com/en/1.0.0/[Keep a Changelog].
+
+=== [major.minor.patch] - year-month-day
+Optional Description
+
+==== Added
+==== Changed
+==== Deprecated
+==== Removed
+==== Fixed
+==== Security
+----
+
+=== [1.0] - {% now 'local', '%Y-%m-%d' %}
+Initial version.
+
+// Fork of https://github.com/NAME/REPO_NAME/releases/tag/VERSION[
+// NAME/REPONAME VERSION on GitHub (dd Month, YYYY)].
