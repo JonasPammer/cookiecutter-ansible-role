@@ -13,4 +13,4 @@ jobs:
         uses: alstr/todo-to-issue-action@v4.5
         id: todo
         with:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOKEN: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}

@@ -14,7 +14,7 @@ name: CI (Lint + Molecule)
 
 defaults:
   run:
-    working-directory: '{{ cookiecutter.galaxy_user }}.{{ cookiecutter.role_name }}'
+    working-directory: '{{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}'
 
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: '{{ cookiecutter.galaxy_user }}.{{ cookiecutter.role_name }}'
+          path: '{{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
@@ -55,7 +55,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: '{{ cookiecutter.galaxy_user }}.{{ cookiecutter.role_name }}'
+          path: '{{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
@@ -70,8 +70,8 @@ jobs:
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
-          MOLECULE_DISTRO: ${{ matrix.distro }}
+          MOLECULE_DISTRO: {% raw %}${{ matrix.distro }}{% endraw %}
 
       - name: Setup tmate session if previous step failed and if this is a manual run
-        if: ${{ failure() && github.event_name == 'workflow_dispatch' }}
+        if: {% raw %}${{ failure() && github.event_name == 'workflow_dispatch' }}{% endraw %}
         uses: mxschmitt/action-tmate@v3

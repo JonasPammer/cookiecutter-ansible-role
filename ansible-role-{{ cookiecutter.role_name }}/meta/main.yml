@@ -2,7 +2,7 @@ galaxy_info:
   role_name: {{ cookiecutter.role_name }}
   description: An ansible role for {{ cookiecutter.project_short_purpose }}.
 
-  author: {{ cookiecutter.author_name }}
+  author: {{ cookiecutter.full_name }}
   license: MIT
 
   min_ansible_version: 2.9

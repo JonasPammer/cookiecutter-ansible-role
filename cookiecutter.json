@@ -2,11 +2,11 @@
     "full_name": "Jonas Pammer",
     "email": "opensource@jonaspammer.at",
     "github_user": "JonasPammer",
-    "galaxy_user": "jonaspammer",
+    "galaxy_name": "jonaspammer",
     "min_ansible_version": "2.9",
     "allow_duplicates": "no",
+    "ansible_user_needs_to_become": true,
 
     "role_name": null,
-    "project_short_purpose": null,
-    "ansible_user_needs_to_become": true
+    "project_short_purpose": null
   }
