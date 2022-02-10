@@ -1,17 +1,17 @@
-= Cookiecutter Ansible Role
+= CookieCutter Ansible Role
 Jonas Pammer <opensource@jonaspammer.at>;
 :toc:
 :toclevels: 3
 :toc-placement!:
 
-https://cookiecutter.readthedocs.io/en/1.7.2/installation.html[
-Install CookieCutter] (e.g. using `pip3 install --user cookiecutter`)
+https://github.com/cruft/cruft[
+Install Cruft] (e.g. using `pip3 install --user cruft`)
 and issue the following command in the parent directory of this folder
 to get started:
 
 [subs="+quotes,attributes"]
 ----
-user@machine:~/dev$ *cookiecutter https://github.com/JonasPammer/cookiecutter-ansible-role.git*
+user@machine:~/dev$ *cruft https://github.com/JonasPammer/cookiecutter-ansible-role.git*
 ----
 
 == Features
