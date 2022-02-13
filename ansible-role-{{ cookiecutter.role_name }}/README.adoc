@@ -24,7 +24,6 @@ An Ansible role for {{ cookiecutter.project_short_purpose }}.
 
 toc::[]
 
-
 [[meta]]
 == 🔎 Metadata
 Below you can find information on…
