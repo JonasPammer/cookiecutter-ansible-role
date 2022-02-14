@@ -28,7 +28,7 @@ jobs:
 
   lint:
     name: Lint
-    if: ${{ github.event.inputs.lint != 'false' }}
+    if: {% raw %}${{ github.event.inputs.lint != 'false' }}{% endraw %}
     runs-on: ubuntu-latest
     steps:
       - name: Check out the codebase.
@@ -86,7 +86,7 @@ jobs:
           path: |
             ~/.cache/pip
             **/molecule/default/requirements.txt
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/molecule/default/requirements.in') }}
+          key: {% raw %}${{ runner.os }}-pip-${{ hashFiles('**/molecule/default/requirements.in') }}{% endraw %}
 
       - name: compile python requirements.txt from requirements.in if cache did not hit
         run: |
