@@ -20,8 +20,6 @@ repos:
       - id: check-symlinks
       - id: check-json
         exclude: ".devcontainer/devcontainer.json"
-      - id: check-yaml
-        args: [--allow-multiple-documents]
       - id: check-toml
       - id: check-xml
       - id: debug-statements
