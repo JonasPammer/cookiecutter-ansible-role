@@ -152,8 +152,8 @@ Take a look at my general ansible role development guidelines at .
 
 This Project shall be kept in sync with 
 https://github.com/JonasPammer/cookiecutter-ansible-role[the CookieCutter it was originally templated from]
-using https://github.com/cruft/cruft[cruft]
-to the best extension possible.
+using https://github.com/cruft/cruft[cruft] (if possible) or manual alteration (if needed)
+to the best extend possible.
 
 .Official Example Usage of `cruft update`
 ____
