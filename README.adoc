@@ -16,38 +16,50 @@ user@machine:~/dev$ *cruft https://github.com/JonasPammer/cookiecutter-ansible-r
 
 == Features
 
-* Awesome README in Asciidoctor Format
+=== General
+* The most Awesome README
++
+[NOTE]
+====
+It is assumed that your project exists under https://app.fossa.com/projects[FOSSA.com].
+====
+* Beginner-Friendly Development Documentation
+** https://code.visualstudio.com/docs/remote/containers[Visual Studio Code Development Container Definition]
+* Contributor Covenant Code of Conduct
 * Beginner-Friendly CONTRIBUTING file inspired by https://github.com/auth0/open-source-template/blob/master/GENERAL-CONTRIBUTING.md[
   Auth0's Open Source Template]
-* Beginner-Friendly Development Documentation
-* https://code.visualstudio.com/docs/remote/containers[Visual Studio Code Development Container Definitions]
-* Basic https://pre-commit.com/[pre-commit] hooks
+* Numerous https://pre-commit.com/[pre-commit] hooks for linting, automatic formatting of various files and to find common issues
 * https://yamllint.readthedocs.io/en/stable/configuration.html#default-configuration[
   `yamllint`] (enforced through pre-commit and checked by CI)
 * https://gist.github.com/JonasPammer/4ea577854ae10afe644bff366d7b2a8a[
-  Conventional Commit] enforcement through pre-commit, assuming the dev activated it.
+  Conventional Commit] enforcement through pre-commit, assuming the developer activated it.
++
+[NOTE]
+====
+The resulting projects mentions that this is completely optional for casual contributors,
+as *it is assumed that pull requests are squash-merged by maintainers*.
+====
 * Basic `.gitignore` including rules for VisualStudioCode, JetBrains, VirtualEnv, Linux, Ansible, SVN, Windows and macOS
-* `.gitattributes` ensuring LF as checked by yamllint
 
 === Ansible
 
 * Includes all Files and Folders expected to be found in an Ansible Role. 
 * Every Ansible file starts with a conventional comment containing the name of the role and the purpose of the file
-* Ansible Galaxy meta information
-* Molecule Converge Definition with Docker and systemd-enabled Images
-* Single `vars/main.yml` instead of per-distribution file and include task
+* Includes Ansible Galaxy `meta.yml`
+* Includes Molecule Converge Definition with Docker and systemd-enabled Images
+* Uses single `vars/main.yml` paradigm instead of per-distribution file and include tasks paradigm, as shown below:
 +
 [source,yaml]
 ----
 _rolename_os_specific_var:app-name:
-    Alpine: …
-    Debian: …
-    Debian_9: …
+  Alpine: …
+  Debian: …
+  Debian_9: …
 
 rolename_os_specific_var: "{{ 
-    _rolename_packages[ansible_distribution ~'_'~ ansible_distribution_major_version]|default(
-    _rolename_packages[ansible_distribution] )|default(
-    _rolename_packages[ansible_os_family] ) }}"
+  _rolename_packages[ansible_distribution ~'_'~ ansible_distribution_major_version]|default(
+  rolename_packages[ansible_distribution] )|default(
+  _rolename_packages[ansible_os_family] ) }}"
 ----
 
 === GitHub
@@ -58,12 +70,19 @@ The resulting projects mentions that `pre-commit` installation is optional,
 as it is assumed that the project is included in your `pre-commit.ci` account projects.
 ====
 
-* GitHub Issue Form YAML Templates for filing bug reports and feature requests using HTML forms
-* GitHub Pull Request Markdown Template
-* GitHub Workflow to release to Ansible Galaxy
+* `.gitattributes` file ensuring LF line endings
+* GitHub *Issue Form Templates* for filing bug reports and feature requests using HTML forms
+* GitHub *Pull Request Template*
+* GitHub *Workflow to release to Ansible Galaxy*
 +
 [NOTE]
 *Requires* a `GALAXY_API_KEY` secret present in the GitHub repository or organization!
-* Continuous GitHub Workflow to `yamllint` / `ansiblelint` all files
-* Continuous GitHub Workflow to run `molecule` test's on a matrix of different OS's (with systemd support)
-* GitHub Workflow to turn `TODO` 's into GitHub Issues
+* Continuous GitHub *Workflow to `yamllint` / `ansiblelint` all files*
+* Continuous GitHub *Workflow to run `molecule` test's on a matrix of different OS's* (with systemd support)
+* Continuous GitHub Workflow to *automatically stale/close issues and PRs* that have had no activity (updates or comments) 
+for 30/7 days respectively.
+* GitHub Workflow to *declaratively manage labels*
+** Predefined `labels.json` is inspired by the kubernetes project
+* GitHub Workflow to denote size of pull requests by automagically labelling them
+* https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates[Dependabot]
+configuration file to check for updates of used GitHub Actions themselves on a monthly basis
