@@ -16,7 +16,6 @@ defaults:
     working-directory: "{{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}"
 
 jobs:
-
   release:
     name: Release
     runs-on: ubuntu-latest

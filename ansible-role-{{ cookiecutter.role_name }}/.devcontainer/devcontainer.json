@@ -1,35 +1,35 @@
 {
-	"name": "{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}",
-	
-	"dockerComposeFile": "./docker-compose.yml",
-	"service": "vscode-env",
-	"remoteUser": "vscode",
-	"workspaceFolder": "/vscode",
-	"features": {
-		"github-cli": "latest"
-	},
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "",
+  "name": "{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}",
 
-	// Set *default* container specific settings.json values on container create.
-	"settings": {},
-	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [
-		// ## Ansible Development ##
-		"redhat.ansible",
-		"redhat.vscode-yaml",
-		"wholroyd.jinja",
-		"samuelcolvin.jinjahtml",
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "vscode-env",
+  "remoteUser": "vscode",
+  "workspaceFolder": "/vscode",
+  "features": {
+    "github-cli": "latest"
+  },
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "",
 
-		// ## General ##
-		"ms-azuretools.vscode-docker",
-		"asciidoctor.asciidoctor-vscode",
-		"Gruntfuggly.todo-tree",
-		"eamodio.gitlens",
-		"donjayamanne.githistory",
-		"mhutchie.git-graph",
-		// "mutantdino.resourcemonitor"
-	]
+  // Set *default* container specific settings.json values on container create.
+  "settings": {},
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    // ## Ansible Development ##
+    "redhat.ansible",
+    "redhat.vscode-yaml",
+    "wholroyd.jinja",
+    "samuelcolvin.jinjahtml",
+
+    // ## General ##
+    "ms-azuretools.vscode-docker",
+    "asciidoctor.asciidoctor-vscode",
+    "Gruntfuggly.todo-tree",
+    "eamodio.gitlens",
+    "donjayamanne.githistory",
+    "mhutchie.git-graph"
+    // "mutantdino.resourcemonitor"
+  ]
 }

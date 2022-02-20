@@ -9,7 +9,7 @@ _{{ cookiecutter.role_name }}_somevar:
   RedHat: ""
 
 
-{{ cookiecutter.role_name }}_somevar: "{% raw %}{{{% endraw %} 
+{{ cookiecutter.role_name }}_somevar: "{% raw %}{{{% endraw %}
   _{{ cookiecutter.role_name }}_somevar[ansible_distribution ~'_'~ ansible_distribution_major_version]|default(
   _{{ cookiecutter.role_name }}_somevar[ansible_distribution])|default(
   _{{ cookiecutter.role_name }}_somevar[ansible_os_family])|default(
