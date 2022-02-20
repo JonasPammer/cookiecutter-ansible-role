@@ -22,7 +22,7 @@ jobs:
           days-before-stale: 30 # default: 60
           days-before-close: 7 # default: 7
           only-labels: "question" # Stale/Close only issues that have been looked at and tagged with this github defaultly-created tag
-          exempt-assignees: "{{ cookiecutter.github_name }}"
+          exempt-assignees: "{{ cookiecutter.github_user }}"
 
           stale-issue-message:
             "This issue has been marked 'stale' due to lack of recent activity.
