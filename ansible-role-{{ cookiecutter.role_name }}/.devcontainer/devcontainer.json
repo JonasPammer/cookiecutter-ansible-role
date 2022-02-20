@@ -1,24 +1,20 @@
 {
 	"name": "{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}",
-
+	
 	"dockerComposeFile": "./docker-compose.yml",
 	"service": "vscode-env",
 	"remoteUser": "vscode",
 	"workspaceFolder": "/vscode",
 	"features": {
-		"github-cli": "latest",
+		"github-cli": "latest"
 	},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "",
 
-
 	// Set *default* container specific settings.json values on container create.
 	"settings": {},
-
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		// ## Ansible Development ##
@@ -26,7 +22,7 @@
 		"redhat.vscode-yaml",
 		"wholroyd.jinja",
 		"samuelcolvin.jinjahtml",
-		
+
 		// ## General ##
 		"ms-azuretools.vscode-docker",
 		"asciidoctor.asciidoctor-vscode",
