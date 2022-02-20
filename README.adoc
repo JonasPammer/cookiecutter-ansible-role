@@ -24,19 +24,19 @@ user@machine:~/dev$ *cruft https://github.com/JonasPammer/cookiecutter-ansible-r
 It is assumed that your project exists under https://app.fossa.com/projects[FOSSA.com].
 ====
 * Includes Beginner-Friendly Development Documentation.
-* Includes a 
+* Includes a
   https://code.visualstudio.com/docs/remote/containers[Visual Studio Code Development Container Definition].
-* Includes a copy of the 
+* Includes a copy of the
   https://www.contributor-covenant.org/version/2/0/code_of_conduct/[Contributor Covenant Code of Conduct] as generated automatically by GitHub.
-* Includes a Beginner-Friendly `CONTRIBUTING` file, inspired by 
+* Includes a Beginner-Friendly `CONTRIBUTING` file, inspired by
   https://github.com/auth0/open-source-template/blob/master/GENERAL-CONTRIBUTING.md[Auth0's Open Source Template].
-* Includes numerous https://pre-commit.com/[pre-commit] hooks to automatically 
-  find linting issues, format your files, and find common issues of version control and source code 
-* Includes a very much standard 
-  https://yamllint.readthedocs.io/en/stable/configuration.html#default-configuration[`yamllint` configuration] 
+* Includes numerous https://pre-commit.com/[pre-commit] hooks to automatically
+  find linting issues, format your files, and find common issues of version control and source code
+* Includes a very much standard
+  https://yamllint.readthedocs.io/en/stable/configuration.html#default-configuration[`yamllint` configuration]
   (enforced through pre-commit and checked by CI)
-* Assumes enforcement of 
-  https://gist.github.com/JonasPammer/4ea577854ae10afe644bff366d7b2a8a[Conventional Commit] 
+* Assumes enforcement of
+  https://gist.github.com/JonasPammer/4ea577854ae10afe644bff366d7b2a8a[Conventional Commit]
   (checked by a pre-commit hook if activated)
 +
 [NOTE]
@@ -48,7 +48,7 @@ as *it is assumed that pull requests are squash-merged by maintainers*.
 
 === Ansible
 
-* Includes all Files and Folders expected to be found in an Ansible Role. 
+* Includes all Files and Folders expected to be found in an Ansible Role.
 * Every Ansible file starts with a conventional comment containing the name of the role and the purpose of the file
 * Includes Ansible Galaxy `meta.yml`
 * Includes Molecule Converge Definition with Docker and systemd-enabled Images
@@ -61,7 +61,7 @@ _rolename_os_specific_var:app-name:
   Debian: …
   Debian_9: …
 
-rolename_os_specific_var: "{{ 
+rolename_os_specific_var: "{{
   _rolename_packages[ansible_distribution ~'_'~ ansible_distribution_major_version]|default(
   rolename_packages[ansible_distribution] )|default(
   _rolename_packages[ansible_os_family] ) }}"
@@ -86,11 +86,11 @@ as it is assumed that the project is included in your `pre-commit.ci` account pr
 ====
 * Includes a Continuous GitHub *Workflow to `yamllint` / `ansiblelint` all files*
 * Includes a Continuous GitHub *Workflow to run `molecule` test's on a matrix of different OS's* (with systemd support)
-* Includes a Continuous GitHub Workflow to *automatically stale/close issues and PRs* that have had no activity (updates or comments) 
+* Includes a Continuous GitHub Workflow to *automatically stale/close issues and PRs* that have had no activity (updates or comments)
 for 30/7 days respectively.
 * Includes a GitHub Workflow to *declaratively manage labels*
 ** The predefined `labels.json` is inspired by the kubernetes project
 * Includes a GitHub Workflow to denote size of pull requests by automagically labelling them
-* Includes a 
+* Includes a
   https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates[Dependabot]
   configuration file to check for updates of used GitHub Actions themselves on a monthly basis

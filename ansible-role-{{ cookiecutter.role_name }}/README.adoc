@@ -150,7 +150,7 @@ Take a look at my general ansible role development guidelines at .
 [[cookiecutter]]
 === 🍪 CookieCutter
 
-This Project shall be kept in sync with 
+This Project shall be kept in sync with
 https://github.com/JonasPammer/cookiecutter-ansible-role[the CookieCutter it was originally templated from]
 using https://github.com/cruft/cruft[cruft] (if possible) or manual alteration (if needed)
 to the best extend possible.
