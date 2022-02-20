@@ -3,7 +3,7 @@
 :toc:
 :toclevels: 3
 
-=== Preamble
+=== 🤝 Preamble
 First off, thank you for considering contributing to this Project.
 
 Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project.
