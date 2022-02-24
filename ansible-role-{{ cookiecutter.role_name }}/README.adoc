@@ -13,12 +13,19 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
+// Very Relevant Status Badges
 https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/ci.yml[image:https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/ci.yml/badge.svg[Testing CI]]
-https://results.pre-commit.ci/latest/github/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/master[image:https://results.pre-commit.ci/badge/github/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/master.svg[pre-commit.ci status]]
 https://app.fossa.com/projects/git%2Bgithub.com%2F{{ cookiecutter.github_user }}%2Fansible-role-{{ cookiecutter.role_name }}?ref=badge_shield[image:https://app.fossa.com/api/projects/git%2Bgithub.com%2F{{ cookiecutter.github_user }}%2Fansible-role-{{ cookiecutter.role_name }}.svg?type=small[FOSSA Licenses Status]]
 
+// Badges about Conventions in this Project
 https://conventionalcommits.org[image:https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg[Conventional Commits]]
+https://results.pre-commit.ci/latest/github/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/master[image:https://results.pre-commit.ci/badge/github/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/master.svg[pre-commit.ci status]]
 // image:https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white[pre-commit, link=https://github.com/pre-commit/pre-commit]
+
+// 1-Click Development Environments
+https://open.vscode.dev/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}[image:https://open.vscode.dev/badges/open-in-vscode.svg[Open in Visual Studio Code]] or
+https://gitpod.io/#https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}[image:https://gitpod.io/button/open-in-gitpod.svg[Open in Gitpod]]
+
 
 An Ansible role for {{ cookiecutter.project_short_purpose }}.
 
@@ -78,7 +85,7 @@ Description
 
 
 [[dependencies]]
-== ⛓️ Dependencies
+== 👫 Dependencies
 // A list of other roles should go here,
 // plus any details in regard to parameters that may need to be set for other roles,
 // or variables that are used from other roles.
@@ -110,9 +117,9 @@ vars:
 Versions are defined using https://git-scm.com/book/en/v2/Git-Basics-Tagging[Tags],
 which in turn are https://galaxy.ansible.com/docs/contributing/version.html[recognized and used] by Ansible Galaxy.
 
-When a new tag is pushed, https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/release.yml[
+When a new tag is pushed, https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/release-to-galaxy.yml[
 a GitHub CI workflow] takes care of importing the role to my Ansible Galaxy Account.
-image:https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/release.yml/badge.svg[Release CI]
+image:https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/release-to-galaxy.yml/badge.svg[Release CI]
 
 [[development--environment]]
 === 🧃 Recommended Development Environment https://open.vscode.dev/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}[image:https://open.vscode.dev/badges/open-in-vscode.svg[Open in Visual Studio Code]]
@@ -142,8 +149,10 @@ Once you've opened a folder in a container, any terminal window you open in VS C
 [[development--tips]]
 === 💁 Tips
 
+{#
 // TODO Add Link to my general ansible role development guideline docs once they're finished
 //  assignees: {{ cookiecutter.github_user }}
+#}
 Take a look at my general ansible role development guidelines at .
 
 

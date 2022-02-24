@@ -1,6 +1,6 @@
 ---
 # vars file of ansible-role {{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}
-# (Almost not overwriteable variables)
+# (tl;dr: almost not overwrite-able variables)
 
 
 _{{ cookiecutter.role_name }}_somevar:
