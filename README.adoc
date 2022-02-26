@@ -48,7 +48,7 @@ It is assumed that your project exists under https://app.fossa.com/projects[FOSS
   https://gist.github.com/JonasPammer/4ea577854ae10afe644bff366d7b2a8a[Conventional Commit]
   (checked by a pre-commit hook if activated)
 +
-[NOTE]
+[IMPORTANT]
 ====
 The resulting projects mentions that this is completely optional for casual contributors,
 as *it is assumed that pull requests are squash-merged by maintainers*.
