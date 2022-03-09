@@ -22,7 +22,7 @@ https://conventionalcommits.org[image:https://img.shields.io/badge/Conventional%
 https://results.pre-commit.ci/latest/github/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/master[image:https://results.pre-commit.ci/badge/github/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/master.svg[pre-commit.ci status]]
 // image:https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white[pre-commit, link=https://github.com/pre-commit/pre-commit]
 
-https://open.vscode.dev/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}[image:https://open.vscode.dev/badges/open-in-vscode.svg[Open in Visual Studio Code]]
+https://open.vscode.dev/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}[image:https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc[Open in Visual Studio Code]]
 
 
 An Ansible role for {{ cookiecutter.project_short_purpose }}.
@@ -178,7 +178,7 @@ how to setup the ideal development environment,
 To use it:
 
 1. Install https://code.visualstudio.com/[Visual Studio Code].
-2. Click on the following badge (which is even linked at the top of most of my projects) and press "Clone repo in container volume": https://open.vscode.dev/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}[image:https://open.vscode.dev/badges/open-in-vscode.svg[Open in Visual Studio Code]].
+2. Click on the following badge (which is even linked at the top of most of my projects) and press "Clone repo in container volume": https://open.vscode.dev/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}[image:https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc[Open in Visual Studio Code]].
 
 [NOTE]
 =====
