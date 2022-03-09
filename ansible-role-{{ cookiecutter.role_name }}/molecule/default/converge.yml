@@ -10,4 +10,4 @@
       changed_when: false
 
   roles:
-    - role: "{{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}"
+    - role: "ansible-role-{{ cookiecutter.role_name }}"
