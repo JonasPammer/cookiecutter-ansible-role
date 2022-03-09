@@ -1,12 +1,12 @@
 ---
 galaxy_info:
-  role_name: "{{ cookiecutter.role_name }}"
+  role_name: {{ cookiecutter.role_name }}
   description: "An ansible role for {{ cookiecutter.project_short_purpose }}."
 
-  author: "{{ cookiecutter.full_name }}"
+  author: {{ cookiecutter.galaxy_name }}
   license: MIT
 
-  min_ansible_version: "{{ cookiecutter.min_ansible_version }}"
+  min_ansible_version: {{ cookiecutter.min_ansible_version }}
   platforms:
     - name: EL # (Enterprise Linux)
       versions:
