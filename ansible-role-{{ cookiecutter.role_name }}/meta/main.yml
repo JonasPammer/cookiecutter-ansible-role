@@ -1,17 +1,17 @@
 ---
 galaxy_info:
-  role_name: {{ cookiecutter.role_name }}
+  role_name: "{{ cookiecutter.role_name }}"
   description: "An ansible role for {{ cookiecutter.project_short_purpose }}."
 
-  author: {{ cookiecutter.galaxy_name }}
+  author: "{{ cookiecutter.galaxy_name }}"
   license: MIT
 
-  min_ansible_version: {{ cookiecutter.min_ansible_version }}
+  min_ansible_version: '{{ cookiecutter.min_ansible_version }}''
   platforms:
     - name: EL # (Enterprise Linux)
       versions:
-        - 7 # actively tested: centos7
-        - 8 # actively tested: rockylinux8
+        - '7' # actively tested: centos7
+        - '8' # actively tested: rockylinux8
     - name: Fedora
       versions:
         - all
