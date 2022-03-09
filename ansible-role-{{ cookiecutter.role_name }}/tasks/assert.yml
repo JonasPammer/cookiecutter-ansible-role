@@ -7,4 +7,4 @@
       - variable_name is defined
       - variable_name is number
       - variable_name >= 0
-    quiet: yes
+    quiet: true
