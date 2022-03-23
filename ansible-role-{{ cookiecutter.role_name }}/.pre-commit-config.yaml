@@ -40,12 +40,6 @@ repos:
       - id: shellcheck
       - id: shfmt
 
-  # takes up the taunting task of formatting bash scripts
-  - repo: https://github.com/lovesegfault/beautysh
-    rev: v6.2.1
-    hooks:
-      - id: beautysh
-
   # opinionated code formatter for all things frontend (also includes Markdown, JSON, YAML)
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v2.5.1
@@ -115,7 +109,7 @@ repos:
 default_language_version:
   python: python3
 ci:
-  skip: [docker-compose-check]
+  skip: [docker-compose-check, shellcheck]
   autofix_commit_msg: |
     chore(pre-commit): auto fixes from hooks :rotating_light:
 
