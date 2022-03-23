@@ -14,7 +14,7 @@ ifdef::env-github[]
 endif::[]
 
 https://github.com/cruft/cruft[
-Install Cruft] (e.g. using `pip3 install --user cruft`)
+Install Cruft] (e.g. using `python3 -m pip install --user cruft`)
 and issue the following command in the parent directory of this folder
 to get started:
 
