@@ -20,7 +20,7 @@ to get started:
 
 [subs="+quotes,attributes"]
 ----
-user@machine:~/dev$ *cruft https://github.com/JonasPammer/cookiecutter-ansible-role.git*
+user@machine:~/dev$ *cruft create https://github.com/JonasPammer/cookiecutter-ansible-role.git*
 ----
 
 == Features
