@@ -6,7 +6,7 @@ galaxy_info:
   author: "{{ cookiecutter.galaxy_name }}"
   license: MIT
 
-  min_ansible_version: '{{ cookiecutter.min_ansible_version }}''
+  min_ansible_version: '{{ cookiecutter.min_ansible_version }}'
   platforms:
     - name: EL # (Enterprise Linux)
       versions:
