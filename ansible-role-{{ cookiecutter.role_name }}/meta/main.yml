@@ -10,8 +10,8 @@ galaxy_info:
   platforms:
     - name: EL # (Enterprise Linux)
       versions:
-        - '7' # actively tested: centos7
-        - '8' # actively tested: rockylinux8
+        - "7" # actively tested: centos7
+        - "8" # actively tested: rockylinux8
     - name: Fedora
       versions:
         - all
