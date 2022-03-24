@@ -78,7 +78,7 @@ devcontainer definition, you can press the accompanying button to enter it.
 
 [TIP]
 ====
-I recommend using `Remote-Containers: Rebuild Without Cache and Reopen in Container` 
+I recommend using `Remote-Containers: Rebuild Without Cache and Reopen in Container`
 once here and there as the devcontainer feature does have some problems recognizing
 changes made to its definition properly some times.
 ====
