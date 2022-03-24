@@ -76,6 +76,13 @@ To use it:
 devcontainer definition, you can press the accompanying button to enter it.
 *Otherwise,* you can also execute the Visual Studio Command `Remote-Containers: Open Folder in Container` yourself (_View - Command Palette_ -> _type in the mentioned command_).
 
+[TIP]
+====
+I recommend using `Remote-Containers: Rebuild Without Cache and Reopen in Container` 
+once here and there as the devcontainer feature does have some problems recognizing
+changes made to its definition properly some times.
+====
+
 // commented out as open.vscode.com does not currently work as tracked in https://github.com/JonasPammer/ansible-role-bootstrap/issues/33
 // [NOTE]
 // =====
