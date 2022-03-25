@@ -126,7 +126,12 @@ include::CONTRIBUTING.adoc[]
 
 [[changelog]]
 == 🗒 Changelog
-include::CHANGELOG.adoc[]
+Please refer to the 
+https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/releases[Release Page of this Repository]
+for a complete changelog with integrated source code comparison functionality.
+
+Note that this Project adheres to Semantic Versioning.
+Please report any accidental breaking changes of a minor version update.
 
 
 [[license]]
