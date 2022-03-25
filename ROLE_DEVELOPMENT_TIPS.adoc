@@ -1,0 +1,238 @@
+= Ansible Role Development (Best) Practices
+Jonas Pammer <opensource@jonaspammer.at>;
+:toc:
+:toclevels: 3
+:toc-placement!:
+
+ifdef::env-github[]
+// https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74#admonitions
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+[TIP]
+If interested, take a look at 
+my additional link:DEVELOPMENT.adoc[Ansible Role Development Guidelines].
+
+toc::[]
+
+== Introduction to Roles
+
+Roles...
+
+* Are self-contained portable units of Ansible automation
+* Are expressed in YAML and bundled with associated assets
+* Are decoupled from assumptions made by plays
+* Reuse and collaboration of common automation workflows & configurations
+* Provide full life-cycle management of a service, microservice or container
+* Provide “De-facto” enforcement of standards and policies
+
+A role should always be more than a single task file.
+
+
+== Ansible Role Best Practices
+
+[[best_practices::single_responsibility]]
+=== Keep the purpose and function of a role self-contained and focused to do one thing well
+
+
+* Think about the full life-cycle of a service, microservice or container — not a whole stack or environment.
+* Keep provisioning separate from configuration and app deployment.
+
+
+* Roles are not classes or object or libraries - those are programming constructs.
+* Keep roles loosely-coupled — limit hard dependencies on other roles or external variables.
+
+
+[[best_practices::sane_defaults]]
+=== Roles should run with as few parameter variables as possible
+
+
+* Practice https://en.wikipedia.org/wiki/Convention_over_configuration[convention over configuration].
+
+* Provide sane defaults.
+
+* Use variable parameters to modify default behavior.
+
+* Denote differences between your role's defaults and the programs' defaults - if exist.
+
+[cols="a,a"]
+|===
+|Exhibit A | Exhibit B
+
+|
+[source,yaml]
+-----
+# defaults_no_playbook.yml
+---
+- hosts: webservers
+  roles:
+  - role: apache_simple
+    apache_http_port: 80
+    apache_doc_root: /var/www/html
+    apache_user: www-data
+    apache_group: www-data
+  - role: apache_simple
+    apache_http_port: 8080
+    apache_doc_root: /www/example.com
+    apache_user: www-data
+    apache_group: www-data
+-----
+
+|
+[source,yaml]
+-----
+# defaults_yes_playbook.yml
+---
+- hosts: webservers
+  roles:
+  - role: apache_simple
+  - role: apache_simple
+    apache_http_port: 8080
+    apache_doc_root: /www/example.com
+-----
+|===
+
+
+[[best_practices::automate_testing]]
+=== Automate the testing of your roles
+
+* Use https://github.com/ansible-community/molecule[molecule],
+a testing framework designed to aid in the
+development and testing of Ansible Roles.
++
+_Initially developed by the community, led by John Dewey of Cisco, and
+adopted by Red Hat as an official Ansible project._
+
+* Use https://github.com/ansible-community/ansible-lint[ansible-lint],
+a command-line static analysis tool that checks
+playbooks and roles for identifying behaviour that could be improved.
+_(TIP: ansible-lint can be run as part of your Molecule test runs.)_
++
+_Initially developed by Will Thames and recently adopted by Red Hat as
+an official Ansible project._
+
+
+[[best_practices::role_vars_pitfall]]
+=== Overcoming the pitfall of Ansible's Role Variable Precedence
+
+`include_vars`/role-vars have precedence over playbook/inventory-vars.
+
+Therefore, a common tactic to enable a dynamic variable to still be overwritten is 
+to apply one of the following schemes:
+
+
+[cols="a,a"]
+|===
+|Separate File for each Distribution + One Task for each Variable | Single Variables File with No Tasks Pollution by using the benefits of Ansible's Lazy Interpolation
+
+| As used by e.g. https://github.com/geerlingguy[geerlingguy]
+| As used by e.g. jonaspammer, https://github.com/robertdebock/[robertdebock]
+
+|
+[source,yaml]
+----
+# in vars/Debian.yml...
+__role_var_name: ""
+
+
+
+# in tasks/main.yml...
+- name: include os-specific vars
+  ansible.builtin.include_vars: "{{ ansible_os_family }}.yml"
+
+- name: set 'role_var_name' to OS-dependant value (when not already defined)
+  ansible.builtin.set_fact:
+    var_name: "{{ __role_var_name }}"
+  when: role_var_name is not defined
+----
+
+| 
+[source,yaml]
+----
+# in vars/main.yml...
+_rolename_os_specific_var:app-name:
+  Alpine: …
+  Debian: …
+  Debian_9: …
+
+rolename_os_specific_var: "{{
+  _rolename_packages[ansible_distribution ~'_'~ ansible_distribution_major_version]|default(
+  rolename_packages[ansible_distribution] )|default(
+  _rolename_packages[ansible_os_family] ) }}"
+----
+
+
+|===
+
+
+
+== Ansible Best-Practices
+
+* Use native YAML syntax.
+
+* Version control your Ansible content.
++
+_This way you have an audit trail describing when and *why* you changed the rules that are automating your infrastructure._
+
+* Use `command` modules sparingly. Always seek out a module first
+
+* “Name” your plays, blocks and tasks.
++
+It is possible to leave off the ‘name’ for a given task,
+though it is recommended to provide a description about why something is being done instead.
+This name is shown when the playbook is run.
+
+* Use human meaningful names with variables, hosts, etc.
+
+* Clean up your debugging messages.
+
+
+[[best_practices::variable_precedence]]
+=== Know Ansible's Variable Precedence
+
+
+[[variable_precedence_ref]]
+.Ansible variable precedence
+====
+Here is the order of precedence from least to greatest (the last listed variables winning prioritization),
+as seen on https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable[
+Ansible's Official Documentation on "Using Variables"]:
+
+. _command line values (for example, `-u user`, these are not variables)_
+. role defaults (defined in role/defaults/main.yml) ^(<<var_precedence::footnote_1,1>>)^
+. inventory file or script group vars ^(<<var_precedence::footnote_2,2>>)^
+. inventory group_vars/all ^(<<var_precedence::footnote_3,3>>)^
+. playbook group_vars/all ^(<<var_precedence::footnote_3,3>>)^
+. inventory group_vars/* ^(<<var_precedence::footnote_3,3>>)^
+. playbook group_vars/* ^(<<var_precedence::footnote_3,3>>)^
+. inventory file or script host vars ^(<<var_precedence::footnote_2,2>>)^
+. inventory host_vars/* ^(<<var_precedence::footnote_3,3>>)^
+. playbook host_vars/* ^(<<var_precedence::footnote_3,3>>)^
+. host facts / cached set_facts ^(<<var_precedence::footnote_4,4>>)^
+. play vars
+. play vars_prompt
+. play vars_files
+. *role vars (defined in role/vars/main.yml)*
+. block vars (only for tasks in block)
+. task vars (only for the task)
+. *include_vars*
+. *set_facts* / registered vars
+. role (and include_role) params
+. include params
+. extra vars (always win precedence)
+
+[[var_precedence::footnote_1]]
+^(<<var_precedence::footnote_1,1>>)^ *Tasks in each role will see their own role's defaults.*
+Tasks defined outside of a role will see the last role's defaults. +
+[[var_precedence::footnote_2]]
+^(<<var_precedence::footnote_2,2>>)^ Variables defined in inventory file or provided by dynamic inventory. +
+[[var_precedence::footnote_3]]
+^(<<var_precedence::footnote_3,3>>)^ Includes vars added by 'vars plugins' as well as `host_vars` and `group_vars`
+which are added by the default `vars` plugin shipped with Ansible. +
+[[var_precedence::footnote_4]]
+^(<<var_precedence::footnote_4,4>>)^ When created with set_facts's cacheable option, variables will have the high precedence in the play, but will be the same as a host facts precedence when they come from the cache.
+====

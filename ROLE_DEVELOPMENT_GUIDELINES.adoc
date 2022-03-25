@@ -1,0 +1,218 @@
+= Ansible Role Development Guidelines
+Jonas Pammer <opensource@jonaspammer.at>;
+:toc:
+:toclevels: 3
+:toc-placement!:
+
+ifdef::env-github[]
+// https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74#admonitions
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+
+[TIP]
+If interested, take a look at 
+my link:TIPS.adoc[Ansible Role Development (Best) Practices]
+
+toc::[]
+
+== Naming Variables
+
+[cols="a,a,a"]
+|===
+|Type |Format |Examples
+
+| defaults
+| `++[role name]_[var name]++`
+| 
+[source,yaml]
+----
+apache_listen_ip: "*"
+----
+
+| vars
+| `++[role name]__[var name]++`
+| 
+[source,yaml]
+----
+apache__vhosts_version: "2.2"
+----
+
+| register
+| `++[role name]__register_[module name]_[var name]++`
+| 
+[source,yaml]
+----
+- name: stat if apache's default DocumentRoot contains a favicon at its root
+  ansible.builtin.stat:
+    path: /var/www/html/favicon.ico
+  register: apache2__register_stat__favicon
+----
+|===
+
+== Naming Tasks
+
+* Use a fully qualified collection names (FQCNs) as a part of the module's name like in the example below.
++
+[cols="a,a"]
+|===
+|Without FQCNs | With FQCNs (https://docs.ansible.com/ansible/devel/porting_guides/porting_guide_2.10.html[Ansible 2.10+ recommendation])
+
+|
+[source,yaml]
+----
+- name: check if all variables have been set correctly
+  import_tasks: assert.yml
+----
+[source,yaml]
+----
+- name: install mpdf using composer
+  composer: …
+----
+
+|
+[source,yaml,subs="+quotes"]
+----
+- name: check if all variables have been set correctly
+  *ansible.builtin*.import_tasks: assert.yml
+----
+[source,yaml,subs="+quotes"]
+----
+- name: install mpdf using composer
+  *community.general*.composer: …
+----
+|===
+
+
+
+* Tasks that do not actually do anything to the system should start lowercase and not end with a dot.
++
+[cols="a,a"]
+|===
+|Examples of important Tasks | Examples of unimportant Tasks
+
+|
+[source,yaml]
+----
+- name: Ensure Apache service is started and enabled on boot.
+  service:
+    name: "{{ apache_service }}"
+    state: started
+    enabled: true
+----
+
+[source,yaml]
+----
+- name: Include Tasks for installing Apache by using the system package manager (when configured).
+  ansible.builtin.include_tasks: "install-{{ ansible_os_family }}.yml"
+  when: apache2_install_method in ["system", "package"]
+----
+
+|
+[source,yaml]
+----
+- name: include os-specific vars
+  ansible.builtin.include_vars: "{{ ansible_os_family }}.yml"
+----
+
+[source,yaml]
+----
+- name: check if all variables have been set correctly
+  ansible.builtin.import_tasks: assert.yml
+  run_once: yes
+  delegate_to: localhost
+----
+
+[source,yaml]
+----
+- name: set 'apache_packages' to OS-dependant value (when not already defined)
+  ansible.builtin.set_fact:
+    apache_packages: "{{ __apache_packages \| list }}"
+  when: apache_packages is not defined
+----
+
+[source,yaml]
+----
+- name: test if 'apache_packages' is set correctly
+  ansible.builtin.assert:
+    that:
+      - apache_packages is defined
+      - apache_packages \| type_debug in ["list", "string"]
+    quiet: yes
+----
+|===
+
+
+
+* Use "Ensure" sparingly. Start with the Action.
++
+[cols="a,a"]
+|===
+| Instead of… | Use…
+
+|
+[source,yaml]
+----
+- name: Ensure Apache2 packages are installed.
+  ansible.builtin.apt:
+    name: "{{ apache_packages }}"
+    state: present
+----
+|
+[source,yaml]
+----
+- name: Install Apache2 packages.
+  ansible.builtin.apt:
+    name: "{{ apache_packages }}"
+    state: present
+----
+
+|
+[source,yaml]
+----
+- name: Ensure mediawiki destination directory exists.
+  ansible.builtin.file:
+    path: "{{ mediawiki_destination }}"
+    state: directory
+----
+|
+[source,yaml]
+----
+- name: Create mediawiki destination directory.
+  ansible.builtin.file:
+    path: "{{ mediawiki_destination }}"
+    state: directory
+----
+
+|===
++
+[cols="a"]
+|===
+| Completely valid usages of "Ensure"
+
+|
+[source,yaml]
+----
+- name: Ensure Apache service is started and enabled on boot.
+  service:
+    name: "{{ apache_service }}"
+    state: started
+    enabled: true
+----
+
+|
+[source,yaml]
+----
+- name: Create PHP configuration directories and ensure correct mode.
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    follow: true
+    mode: u=rwx,g=rx,o=rx
+  loop: "{{ php_conf_paths }}"
+----
+|===
