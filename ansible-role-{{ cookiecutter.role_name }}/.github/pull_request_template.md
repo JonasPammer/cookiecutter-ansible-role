@@ -1,7 +1,6 @@
 Fixes #
 
-[...Insert your Bachelor Description, if any...]
-
+<!-- Insert Description here, if any. -->
 ## **Required Checklist**
 
 - [ ] documentation has been altered or extended appropriately
