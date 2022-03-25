@@ -126,7 +126,7 @@ include::CONTRIBUTING.adoc[]
 
 [[changelog]]
 == 🗒 Changelog
-Please refer to the 
+Please refer to the
 https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/releases[Release Page of this Repository]
 for a human changelog of the corresponding
 https://github.com/JonasPammer/ansible-role-bootstrap/tags[Tags (Versions) of this Project].
