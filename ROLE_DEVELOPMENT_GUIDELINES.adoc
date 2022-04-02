@@ -15,7 +15,7 @@ endif::[]
 
 
 [TIP]
-If interested, take a look at 
+If interested, take a look at
 my link:TIPS.adoc[Ansible Role Development (Best) Practices]
 
 toc::[]
@@ -28,7 +28,7 @@ toc::[]
 
 | defaults
 | `++[role name]_[var name]++`
-| 
+|
 [source,yaml]
 ----
 apache_listen_ip: "*"
@@ -36,7 +36,7 @@ apache_listen_ip: "*"
 
 | vars
 | `++[role name]__[var name]++`
-| 
+|
 [source,yaml]
 ----
 apache__vhosts_version: "2.2"
@@ -44,7 +44,7 @@ apache__vhosts_version: "2.2"
 
 | register
 | `++[role name]__register_[module name]_[var name]++`
-| 
+|
 [source,yaml]
 ----
 - name: stat if apache's default DocumentRoot contains a favicon at its root

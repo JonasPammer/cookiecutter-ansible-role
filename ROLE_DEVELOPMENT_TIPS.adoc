@@ -14,7 +14,7 @@ ifdef::env-github[]
 endif::[]
 
 [TIP]
-If interested, take a look at 
+If interested, take a look at
 my additional link:DEVELOPMENT.adoc[Ansible Role Development Guidelines].
 
 toc::[]
@@ -121,7 +121,7 @@ an official Ansible project._
 
 `include_vars`/role-vars have precedence over playbook/inventory-vars.
 
-Therefore, a common tactic to enable a dynamic variable to still be overwritten is 
+Therefore, a common tactic to enable a dynamic variable to still be overwritten is
 to apply one of the following schemes:
 
 
@@ -150,7 +150,7 @@ __role_var_name: ""
   when: role_var_name is not defined
 ----
 
-| 
+|
 [source,yaml]
 ----
 # in vars/main.yml...
