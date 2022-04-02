@@ -60,6 +60,9 @@ include::meta/main.yml[]
 User needs to be able to `become`.
 {% endif %}
 
+The https://galaxy.ansible.com/community/general[`community.general` collection] 
+must be installed on the Ansible controller.
+
 
 [[variables]]
 == 📜 Role Variables
