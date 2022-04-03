@@ -56,11 +56,11 @@ apache__vhosts_version: "2.2"
 
 == Naming Tasks
 
-* Use a fully qualified collection names (FQCNs) as a part of the module's name like in the example below.
+* Use a fully qualified collection names (FQCNs), as per https://docs.ansible.com/ansible/devel/porting_guides/porting_guide_2.10.html[Ansible's 2.10 Recommendation].
 +
 [cols="a,a"]
 |===
-|Without FQCNs | With FQCNs (https://docs.ansible.com/ansible/devel/porting_guides/porting_guide_2.10.html[Ansible 2.10+ recommendation])
+|Without FQCNs | With FQCNs (Ansible 2.10+ recommendation)
 
 |
 [source,yaml]
