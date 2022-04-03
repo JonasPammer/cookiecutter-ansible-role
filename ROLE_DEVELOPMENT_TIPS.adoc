@@ -14,8 +14,8 @@ ifdef::env-github[]
 endif::[]
 
 [TIP]
-For additional Guidelines I require to be applied to my roles,
-take a look ad my link:DEVELOPMENT.adoc[Ansible Role Development Guidelines].
+For information on additional Guidelines I require to be applied to my roles,
+take a look at link:ROLE_DEVELOPMENT_GUIDELINES.adoc[my Ansible Role Development Guidelines].
 
 toc::[]
 

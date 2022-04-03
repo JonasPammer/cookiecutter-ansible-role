@@ -1,4 +1,4 @@
-= Ansible Role Development Guidelines
+= JonasPammer's Ansible Role Development Guidelines
 Jonas Pammer <opensource@jonaspammer.at>;
 :toc:
 :toclevels: 3
@@ -15,8 +15,8 @@ endif::[]
 
 
 [TIP]
-For General Best Practices,
-take a look at my link:TIPS.adoc[Ansible Role Development (Best) Practices]
+For an overview of General Ansible Role Development Practices,
+take a look at my link:ROLE_DEVELOPMENT_TIPS.adoc[Ansible Role Development (Best) Practices] document.
 
 toc::[]
 
