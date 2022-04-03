@@ -15,8 +15,8 @@ endif::[]
 
 
 [TIP]
-If interested, take a look at
-my link:TIPS.adoc[Ansible Role Development (Best) Practices]
+For General Best Practices,
+take a look at my link:TIPS.adoc[Ansible Role Development (Best) Practices]
 
 toc::[]
 
