@@ -111,8 +111,12 @@ apache__vhosts_version: "2.2"
   ansible.builtin.include_tasks: "install-{{ ansible_os_family }}.yml"
   when: apache2_install_method in ["system", "package"]
 ----
+|===
++
+[cols="a"]
+|===
+|Examples of unimportant Tasks
 
-h| Examples of unimportant Tasks
 |
 [source,yaml]
 ----
