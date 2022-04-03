@@ -99,12 +99,20 @@ Description
 // plus any details in regard to parameters that may need to be set for other roles,
 // or variables that are used from other roles.
 
+The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
+
+.link:molecule/default/prepare.yml[]
+[source,yaml]
+----
+include::molecule/default/prepare.yml[]
+----
+
 
 [[example_playbooks]]
 == 📚 Example Playbook Usages
 // Including examples of how to use this role in a playbook for common scenarios is always nice for users too:
 
-.Description of Example
+.Minimum Viable Play
 ====
 [source,yaml]
 ----
