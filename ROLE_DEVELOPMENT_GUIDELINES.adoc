@@ -91,9 +91,9 @@ apache__vhosts_version: "2.2"
 
 * Tasks that do not actually do anything to the system should start lowercase and not end with a dot.
 +
-[cols="a,a"]
+[cols="a"]
 |===
-|Examples of important Tasks | Examples of unimportant Tasks
+|Examples of important Tasks
 
 |
 [source,yaml]
@@ -112,6 +112,7 @@ apache__vhosts_version: "2.2"
   when: apache2_install_method in ["system", "package"]
 ----
 
+h| Examples of unimportant Tasks
 |
 [source,yaml]
 ----
