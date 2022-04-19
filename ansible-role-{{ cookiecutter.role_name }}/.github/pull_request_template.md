@@ -2,7 +2,7 @@ Fixes #
 
 <!-- Insert Description here, if any. -->
 
-## *Required Checklist*
+## **Required Checklist**
 
 - [ ] Documentation has been altered or extended appropriately
 - [ ] This pull request and its commits address only a single concern
