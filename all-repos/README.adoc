@@ -1,0 +1,34 @@
+= CookieCutter Ansible Role | all-repos
+Jonas Pammer <opensource@jonaspammer.at>;
+:source-highlighter: rouge
+
+
+link:all-repos-in.json[] is an `all.repos.source.json_file` compatible source file
+consisting of all of my ansible roles.
+It can be used in an `all-repos.json` file as shown in the following example:
+
+[source%linenums,json,highlight=3..5]
+----
+{
+    "output_dir": ".",
+    "source": "all_repos.source.json_file",
+    "source_settings": {
+        "filename": "all-repos-in.json"
+    },
+    "push": "all_repos.push.github_pull_request",
+    "push_settings": {
+        "api_key": "…",
+        "username": "…"
+    }
+}
+----
+
+== Example Commands
+
+----
+$ python3 -m pip install all-repos
+
+$ all-repos-clone
+
+// TODO add all-repos-sed examples here
+----
