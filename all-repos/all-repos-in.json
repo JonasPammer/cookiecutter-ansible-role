@@ -1,5 +1,6 @@
 {
     "ansible-role-bootstrap": "git@github.com:JonasPammer/ansible-role-bootstrap.git",
     "ansible-role-core_dependencies": "git@github.com:JonasPammer/ansible-role-core_dependencies.git",
+    "ansible-role-pip": "git@github.com:JonasPammer/ansible-role-pip.git",
     "cookiecutter-ansible-role": "git@github.com:JonasPammer/cookiecutter-ansible-role.git"
 }
