@@ -5,8 +5,9 @@ Jonas Pammer <opensource@jonaspammer.at>;
 
 link:all-repos-in.json[] is an `all.repos.source.json_file` compatible source file
 consisting of all of my ansible roles.
-It can be used in an `all-repos.json` file as shown in the following example:
+It can be used in an https://github.com/asottile/all-repos[all-repos] configuration file as shown in below example:
 
+.all-repos.json
 [source%linenums,json,highlight=3..5]
 ----
 {
