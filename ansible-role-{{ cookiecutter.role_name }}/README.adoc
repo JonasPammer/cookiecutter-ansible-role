@@ -100,6 +100,17 @@ Description
 // or variables that are used from other roles.
 
 
+.Overview of related roles
+====
+Most roles have a “soft dependency” described in their `requirements.yml` file.
+The following diagram is a compilation of the soft dependencies of this role 
+as well as the recursive soft dependencies of their `requirements.yml`.
+
+image:https://raw.githubusercontent.com/{{ cookiecutter.github_user }}/ansible-roles/master/graphs/dependencies_{{ cookiecutter.role_name }}.svg[
+requirements.yml dependency graph of {{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}]
+image:https://raw.githubusercontent.com/JonasPammer/ansible-roles/master/graphs/dependencies_pip.svg[]
+====
+
 
 [[example_playbooks]]
 == 📚 Example Playbook Usages
@@ -107,7 +118,9 @@ Description
 
 [NOTE]
 ====
-The machine needs to be prepared. In CI, this is done using `molecule/default/prepare.yml`:
+The machine needs to be prepared. 
+In CI, this is done using `molecule/default/prepare.yml` 
+which uses this role's soft dependencies:
 
 .link:molecule/default/prepare.yml[]
 [source,yaml]
