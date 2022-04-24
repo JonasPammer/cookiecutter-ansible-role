@@ -108,7 +108,6 @@ as well as the recursive soft dependencies of their `requirements.yml`.
 
 image:https://raw.githubusercontent.com/{{ cookiecutter.github_user }}/ansible-roles/master/graphs/dependencies_{{ cookiecutter.role_name }}.svg[
 requirements.yml dependency graph of {{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}]
-image:https://raw.githubusercontent.com/JonasPammer/ansible-roles/master/graphs/dependencies_pip.svg[]
 ====
 
 
@@ -119,8 +118,7 @@ image:https://raw.githubusercontent.com/JonasPammer/ansible-roles/master/graphs/
 [NOTE]
 ====
 The machine needs to be prepared. 
-In CI, this is done using `molecule/default/prepare.yml` 
-which uses this role's soft dependencies:
+In CI, this is done using `molecule/default/prepare.yml`:
 
 .link:molecule/default/prepare.yml[]
 [source,yaml]
