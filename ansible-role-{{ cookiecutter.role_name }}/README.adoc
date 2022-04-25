@@ -103,6 +103,11 @@ Description
 .Overview of related roles
 [NOTE]
 ====
+This role is a part of many compatible roles.
+Check out 
+https://github.com/{{ cookiecutter.github_user }}/ansible-roles[the documentation of these roles] 
+for an periodically re-generated informative status and introduction page.
+
 Most roles have a “soft dependency” described in their `requirements.yml` file.
 The following diagram is a compilation of the soft dependencies of this role 
 as well as the recursive soft dependencies of their `requirements.yml`.
