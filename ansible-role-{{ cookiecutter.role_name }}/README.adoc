@@ -117,7 +117,7 @@ requirements.yml dependency graph of {{ cookiecutter.galaxy_name }}.{{ cookiecut
 
 [NOTE]
 ====
-The machine needs to be prepared. 
+The machine needs to be prepared.
 In CI, this is done using `molecule/default/prepare.yml`:
 
 .link:molecule/default/prepare.yml[]
