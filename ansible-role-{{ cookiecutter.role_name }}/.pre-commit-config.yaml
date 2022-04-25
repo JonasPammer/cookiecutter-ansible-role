@@ -126,16 +126,6 @@ repos:
     hooks:
       - id: flake8
 
-  # flake8 is a python tool that glues together
-  # pycodestyle (befriended with `black` through config changes),
-  # pyflakes (detects various error by parsing [not importing] source file's),
-  # mccabe (https://en.wikipedia.org/wiki/Cyclomatic_complexity checker),
-  # and third-party plugins to check the style and quality of some python code.
-  - repo: https://github.com/pycqa/flake8
-    rev: "4.0.1"
-    hooks:
-      - id: flake8
-
 # TODO python doc formatter
 
 default_language_version:
