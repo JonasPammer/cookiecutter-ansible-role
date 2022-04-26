@@ -100,22 +100,6 @@ Description
 // or variables that are used from other roles.
 
 
-.Overview of related roles
-[NOTE]
-====
-This role is a part of many compatible roles.
-Check out 
-https://github.com/{{ cookiecutter.github_user }}/ansible-roles[the documentation of these roles] 
-for an periodically re-generated informative status and introduction page.
-
-Most roles have a “soft dependency” described in their `requirements.yml` file.
-The following diagram is a compilation of the soft dependencies of this role 
-as well as the recursive soft dependencies of their `requirements.yml`.
-
-image:https://raw.githubusercontent.com/{{ cookiecutter.github_user }}/ansible-roles/master/graphs/dependencies_{{ cookiecutter.role_name }}.svg[
-requirements.yml dependency graph of {{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}]
-====
-
 
 [[example_playbooks]]
 == 📚 Example Playbook Usages
@@ -123,14 +107,24 @@ requirements.yml dependency graph of {{ cookiecutter.galaxy_name }}.{{ cookiecut
 
 [NOTE]
 ====
+This role is part of https://github.com/{{ cookiecutter.github_user }}/ansible-roles[
+many compatible purpose-specific roles of mine].
+
 The machine needs to be prepared.
-In CI, this is done using `molecule/default/prepare.yml`:
+In CI, this is done in `molecule/default/prepare.yml`
+which sources its soft dependencies from `requirements.yml`:
 
 .link:molecule/default/prepare.yml[]
 [source,yaml]
 ----
 include::molecule/default/prepare.yml[]
 ----
+
+The following diagram is a compilation of the "soft dependencies" of this role 
+as well as the recursive tree of their soft dependencies.
+
+image:https://raw.githubusercontent.com/{{ cookiecutter.github_user }}/ansible-roles/master/graphs/dependencies_{{ cookiecutter.role_name }}.svg[
+requirements.yml dependency graph of {{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}]
 ====
 
 .Minimum Viable Play
