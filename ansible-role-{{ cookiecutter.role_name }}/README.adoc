@@ -16,7 +16,6 @@ endif::[]
 
 // Very Relevant Status Badges
 https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/ci.yml[image:https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/ci.yml/badge.svg[Testing CI]]
-https://app.fossa.com/projects/git%2Bgithub.com%2F{{ cookiecutter.github_user }}%2Fansible-role-{{ cookiecutter.role_name }}?ref=badge_shield[image:https://app.fossa.com/api/projects/git%2Bgithub.com%2F{{ cookiecutter.github_user }}%2Fansible-role-{{ cookiecutter.role_name }}.svg?type=small[FOSSA Licenses Status]]
 
 // Badges about Conventions in this Project
 https://conventionalcommits.org[image:https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg[Conventional Commits]]
@@ -168,5 +167,3 @@ Please report any accidental breaking changes of a minor version update.
 ----
 include::LICENSE[]
 ----
-
-https://app.fossa.com/projects/git%2Bgithub.com%2F{{ cookiecutter.github_user }}%2Fansible-role-{{ cookiecutter.role_name }}?ref=badge_large[image:https://app.fossa.com/api/projects/git%2Bgithub.com%2F{{ cookiecutter.github_user }}%2Fansible-role-{{ cookiecutter.role_name }}.svg?type=large[FOSSA Licensing Information]]

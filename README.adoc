@@ -30,11 +30,6 @@ user@machine:~/dev$ *cruft create https://github.com/JonasPammer/cookiecutter-an
 +
 [NOTE]
 ====
-*It is assumed that* your project exists under https://app.fossa.com/projects[FOSSA.com].
-====
-+
-[NOTE]
-====
 Because
 https://github.com/github/markup/issues/1095[github/markup#1095 (support include directives for other asciidoc files)],
 is still not fixed, the following measures were taken:
