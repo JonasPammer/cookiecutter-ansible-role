@@ -92,6 +92,14 @@ variable: [OS-specific by default, see /vars directory]
 Description
 
 
+[[public_vars]]
+== 📜 Facts/Variables defined by this role
+
+Each variable listed in this section
+is dynamically defined when executing this role (and can only be overwritten using `ansible.builtin.set_facts`) _and_
+is meant to be used not just internally.
+
+
 [[dependencies]]
 == 👫 Dependencies
 // A list of other roles should go here,
