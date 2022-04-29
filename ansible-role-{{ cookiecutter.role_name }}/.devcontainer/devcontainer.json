@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.224.3/containers/docker-in-docker
 {
-  "name": "ansible-role-dind-{{ cookiecutter.github_user }}-{{ cookiecutter.role_name }}",
+  "name": "ansible-role-dind-{{ cookiecutter.github_username }}-{{ cookiecutter.role_name }}",
   "dockerFile": "Dockerfile",
   "runArgs": ["--init", "--privileged"],
   "mounts": ["source=dind-var-lib-docker,target=/var/lib/docker,type=volume"],

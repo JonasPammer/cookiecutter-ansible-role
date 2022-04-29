@@ -4,9 +4,9 @@
 Versions are defined using https://git-scm.com/book/en/v2/Git-Basics-Tagging[Tags],
 which in turn are https://galaxy.ansible.com/docs/contributing/version.html[recognized and used] by Ansible Galaxy.
 
-When a new tag is pushed, https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/release-to-galaxy.yml[
+When a new tag is pushed, https://github.com/{{ cookiecutter.github_username }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/release-to-galaxy.yml[
 a GitHub CI workflow] takes care of importing the role to my Ansible Galaxy Account.
-image:https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/release-to-galaxy.yml/badge.svg[Release CI]
+image:https://github.com/{{ cookiecutter.github_username }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/release-to-galaxy.yml/badge.svg[Release CI]
 
 ==== Changelog by means of Releases
 When a new tag is pushed, an appropriate GitHub Release will be created
@@ -126,4 +126,4 @@ It even has a free plan.
 It's great for Ad-Hoc changes / fiddling around from anywhere on any kind of Computer Device I'm on right now.
 Big Baller's can even Self-Host the service.__
 
-https://gitpod.io/#https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}[image:https://gitpod.io/button/open-in-gitpod.svg[Open in Gitpod]]
+https://gitpod.io/#https://github.com/{{ cookiecutter.github_username }}/ansible-role-{{ cookiecutter.role_name }}[image:https://gitpod.io/button/open-in-gitpod.svg[Open in Gitpod]]

@@ -15,20 +15,20 @@ ifdef::env-github[]
 endif::[]
 
 // Very Relevant Status Badges
-https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/ci.yml[image:https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/ci.yml/badge.svg[Testing CI]]
+https://github.com/{{ cookiecutter.github_username }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/ci.yml[image:https://github.com/{{ cookiecutter.github_username }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/ci.yml/badge.svg[Testing CI]]
 
 // Badges about Conventions in this Project
 https://conventionalcommits.org[image:https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg[Conventional Commits]]
-https://results.pre-commit.ci/latest/github/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/master[image:https://results.pre-commit.ci/badge/github/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/master.svg[pre-commit.ci status]]
+https://results.pre-commit.ci/latest/github/{{ cookiecutter.github_username }}/ansible-role-{{ cookiecutter.role_name }}/master[image:https://results.pre-commit.ci/badge/github/{{ cookiecutter.github_username }}/ansible-role-{{ cookiecutter.role_name }}/master.svg[pre-commit.ci status]]
 // image:https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white[pre-commit, link=https://github.com/pre-commit/pre-commit]
-https://open.vscode.dev/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}[image:https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc[Open in Visual Studio Code]]
+https://open.vscode.dev/{{ cookiecutter.github_username }}/ansible-role-{{ cookiecutter.role_name }}[image:https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc[Open in Visual Studio Code]]
 image:https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square[PRs Welcome]
 
 
 ifdef::env-github[]
 [TIP]
-__A single-page version of this README can be found at https://{{ cookiecutter.github_user }}.github.io/ansible-role-{{ cookiecutter.role_name }}[
-{{ cookiecutter.github_user }}.github.io/ansible-role-{{ cookiecutter.role_name }}].__
+__A single-page version of this README can be found at https://{{ cookiecutter.github_username }}.github.io/ansible-role-{{ cookiecutter.role_name }}[
+{{ cookiecutter.github_username }}.github.io/ansible-role-{{ cookiecutter.role_name }}].__
 endif::[]
 
 
@@ -114,7 +114,7 @@ is meant to be used not just internally.
 
 [NOTE]
 ====
-This role is part of https://github.com/{{ cookiecutter.github_user }}/ansible-roles[
+This role is part of https://github.com/{{ cookiecutter.github_username }}/ansible-roles[
 many compatible purpose-specific roles of mine].
 
 The machine needs to be prepared.
@@ -130,7 +130,7 @@ include::molecule/default/prepare.yml[]
 The following diagram is a compilation of the "soft dependencies" of this role
 as well as the recursive tree of their soft dependencies.
 
-image:https://raw.githubusercontent.com/{{ cookiecutter.github_user }}/ansible-roles/master/graphs/dependencies_{{ cookiecutter.role_name }}.svg[
+image:https://raw.githubusercontent.com/{{ cookiecutter.github_username }}/ansible-roles/master/graphs/dependencies_{{ cookiecutter.role_name }}.svg[
 requirements.yml dependency graph of {{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}]
 ====
 
@@ -160,9 +160,9 @@ include::CONTRIBUTING.adoc[]
 [[changelog]]
 == 🗒 Changelog
 Please refer to the
-https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/releases[Release Page of this Repository]
+https://github.com/{{ cookiecutter.github_username }}/ansible-role-{{ cookiecutter.role_name }}/releases[Release Page of this Repository]
 for a human changelog of the corresponding
-https://github.com/{{ cookiecutter.github_user }}/ansible-role-{{ cookiecutter.role_name }}/tags[Tags (Versions) of this Project].
+https://github.com/{{ cookiecutter.github_username }}/ansible-role-{{ cookiecutter.role_name }}/tags[Tags (Versions) of this Project].
 
 Note that this Project adheres to Semantic Versioning.
 Please report any accidental breaking changes of a minor version update.
