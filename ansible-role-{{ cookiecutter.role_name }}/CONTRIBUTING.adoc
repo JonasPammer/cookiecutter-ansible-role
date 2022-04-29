@@ -1,4 +1,3 @@
-// Contribution File for ansible-role "{{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}"
 // Included in README.adoc
 :toc:
 :toclevels: 3
