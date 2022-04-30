@@ -1,5 +1,4 @@
-
-[[development--dependencies]]
+[[development-dependencies]]
 === Development Dependencies
 Development Dependencies are defined in a
 https://pip.pypa.io/en/stable/user_guide/#requirements-files[pip requirements file]
@@ -13,6 +12,35 @@ $ source venv/bin/activate
 
 $ python3 -m pip install -r requirements-dev.txt
 ----
+
+[[cookiecutter]]
+=== 🍪 CookieCutter
+
+This Project shall be kept in sync with
+https://github.com/JonasPammer/cookiecutter-ansible-role[the CookieCutter it was originally templated from]
+using https://github.com/cruft/cruft[cruft] (if possible) or manual alteration (if needed)
+to the best extend possible.
+
+.Official Example Usage of `cruft update`
+____
+image::https://raw.githubusercontent.com/cruft/cruft/master/art/example_update.gif[Official Example Usage of `cruft update`]
+____
+
+
+[[development--versioning]]
+=== 📦 Versioning
+
+Versions are defined using https://git-scm.com/book/en/v2/Git-Basics-Tagging[Tags],
+which in turn are https://galaxy.ansible.com/docs/contributing/version.html[recognized and used] by Ansible Galaxy.
+
+When a new tag is pushed, https://github.com/{{ cookiecutter.github_username }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/release-to-galaxy.yml[
+a GitHub CI workflow] takes care of importing the role to my Ansible Galaxy Account.
+image:https://github.com/{{ cookiecutter.github_username }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/release-to-galaxy.yml/badge.svg[Release CI]
+
+==== Changelog
+When a new tag is pushed, an appropriate GitHub Release will be created
+by the Repository Maintainer to provide a proper human change log with a title and description.
+
 
 [[pre-commit]]
 === General Linting and Styling Conventions
@@ -79,35 +107,6 @@ Ansible Role Development Guidelines].
 If interested, I've also written down some
 https://github.com/JonasPammer/cookiecutter-ansible-role/blob/master/ROLE_DEVELOPMENT_TIPS.adoc[
 General Ansible Role Development (Best) Practices].
-
-
-[[cookiecutter]]
-=== 🍪 CookieCutter
-
-This Project shall be kept in sync with
-https://github.com/JonasPammer/cookiecutter-ansible-role[the CookieCutter it was originally templated from]
-using https://github.com/cruft/cruft[cruft] (if possible) or manual alteration (if needed)
-to the best extend possible.
-
-.Official Example Usage of `cruft update`
-____
-image::https://raw.githubusercontent.com/cruft/cruft/master/art/example_update.gif[Official Example Usage of `cruft update`]
-____
-
-
-[[development--versioning]]
-=== 📦 Versioning
-
-Versions are defined using https://git-scm.com/book/en/v2/Git-Basics-Tagging[Tags],
-which in turn are https://galaxy.ansible.com/docs/contributing/version.html[recognized and used] by Ansible Galaxy.
-
-When a new tag is pushed, https://github.com/{{ cookiecutter.github_username }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/release-to-galaxy.yml[
-a GitHub CI workflow] takes care of importing the role to my Ansible Galaxy Account.
-image:https://github.com/{{ cookiecutter.github_username }}/ansible-role-{{ cookiecutter.role_name }}/actions/workflows/release-to-galaxy.yml/badge.svg[Release CI]
-
-==== Changelog
-When a new tag is pushed, an appropriate GitHub Release will be created
-by the Repository Maintainer to provide a proper human change log with a title and description.
 
 
 === 🧃 TIP: Containerized Ideal Development Environment
