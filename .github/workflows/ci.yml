@@ -28,7 +28,7 @@ jobs:
 
       - name: Generate example project from cookiecutter.
         run: cookiecutter . --config-file .github/cookiecutter-example.yml --no-input
-      
+
       - name: Run pre-commit on all files in generated directory.
         run: git init; pre-commit run --all-files
         working-directory: ./ansible-role-myrole

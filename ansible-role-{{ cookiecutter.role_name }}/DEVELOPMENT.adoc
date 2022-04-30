@@ -20,7 +20,7 @@ General Linting and Styling Conventions are
 https://stackoverflow.blog/2020/07/20/linters-arent-in-your-way-theyre-on-your-side/[*automatically* held up to Standards]
 by various https://pre-commit.com/[`pre-commit`] hooks, at least to some extend.
 
-Automatic Execution of pre-commit is done on each Contribution using 
+Automatic Execution of pre-commit is done on each Contribution using
 https://pre-commit.ci/[`pre-commit.ci`]<<note_pre-commit-ci,*>>.
 Pull Requests even automatically get fixed by the same tool,
 at least by hooks that automatically alter files.
@@ -125,7 +125,7 @@ To use it:
    This includes: Installing Docker, Installing Visual Studio Code itself, and Installing the necessary Extension.
 2. Clone the project to your machine
 3. Open the folder of the repo in Visual Studio Code (_File - Open Folder…_).
-4. If you get a prompt at the lower right corner informing you about the presence of the devcontainer definition, 
+4. If you get a prompt at the lower right corner informing you about the presence of the devcontainer definition,
 you can press the accompanying button to enter it.
 *Otherwise,* you can also execute the Visual Studio Command `Remote-Containers: Open Folder in Container` yourself (_View - Command Palette_ -> _type in the mentioned command_).
 
