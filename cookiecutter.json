@@ -9,6 +9,6 @@
   "ansible_user_needs_to_become": true,
 
   "role_name": null,
-  "project_slug": "{{ cookiecutter.project_slug }}",
+  "project_slug": "ansible-role-{{ cookiecutter.role_name }}",
   "project_short_purpose": null
 }
