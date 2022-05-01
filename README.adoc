@@ -108,6 +108,15 @@ The resulting projects mentions that `pre-commit` installation is optional,
 as it is assumed that the project is included in your `pre-commit.ci` account projects.
 ====
 
+* Includes a Continuous GitHub *Workflow to `yamllint` / `ansiblelint` all files*
+* Includes a Continuous GitHub *Workflow to run `molecule` test's on a matrix of different OS's* (with systemd support)
+* Includes a GitHub *Workflow to release to Ansible Galaxy*
++
+[NOTE]
+====
+*Requires* a `GALAXY_API_KEY` secret present in the GitHub repository or organization!
+====
+
 * Includes a `.gitattributes` file, ensuring LF line endings
 * Includes GitHub *Issue Form Templates* for filing bug reports and feature requests using HTML forms
 * Includes a GitHub *Pull Request Template*
@@ -116,13 +125,5 @@ as it is assumed that the project is included in your `pre-commit.ci` account pr
 * Includes a
   https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates[Dependabot]
   configuration file to check for updates of used GitHub Actions themselves on a monthly basis
-* Includes a GitHub *Workflow to release to Ansible Galaxy*
-+
-[NOTE]
-====
-*Requires* a `GALAXY_API_KEY` secret present in the GitHub repository or organization!
-====
 * Includes a GitHub Workflow to *declaratively manage labels*
 ** The predefined `labels.json` is inspired by the kubernetes project
-* Includes a Continuous GitHub *Workflow to `yamllint` / `ansiblelint` all files*
-* Includes a Continuous GitHub *Workflow to run `molecule` test's on a matrix of different OS's* (with systemd support)
