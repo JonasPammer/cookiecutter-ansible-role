@@ -8,7 +8,7 @@ permissions: read-all
     paths:
       - ".github/workflows/ci.yml"
       - ".github/cookiecutter-example.yml"
-      - "ansible-role-{{ cookiecutter.role_name }}/**"
+      - "{{ cookiecutter.project_slug }}/**"
       - "cookiecutter.json"
       - "requirements-dev.txt"
 
