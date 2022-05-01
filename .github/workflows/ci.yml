@@ -5,9 +5,12 @@ permissions: read-all
   push:
     branches:
       - master
-    paths-ignore:
-      - "README.adoc"
-      - "LICENSE"
+    paths:
+      - ".github/workflows/ci.yml"
+      - ".github/cookiecutter-example.yml"
+      - "ansible-role-{{ cookiecutter.role_name }}/**"
+      - "cookiecutter.json"
+      - "requirements-dev.txt"
 
 jobs:
   test-latest:
