@@ -51,3 +51,9 @@ jobs:
           source project-venv/bin/activate
           pre-commit run --all-files --show-diff-on-failure
         working-directory: ./ansible-role-myrole
+
+      - name: Run tox in generated project
+        run: |
+          source project-venv/bin/activate
+          tox
+        working-directory: ./ansible-role-myrole
