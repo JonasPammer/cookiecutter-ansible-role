@@ -72,6 +72,17 @@ You can also, for example, execute pre-commit's hooks at any time by running `pr
 ====
 
 
+[[development-guidelines]]
+=== 💁 Ansible Role Development Guidelines
+
+Please take a look at my https://github.com/JonasPammer/cookiecutter-ansible-role/blob/master/ROLE_DEVELOPMENT_GUIDELINES.adoc[
+Ansible Role Development Guidelines].
+
+If interested, I've also written down some
+https://github.com/JonasPammer/cookiecutter-ansible-role/blob/master/ROLE_DEVELOPMENT_TIPS.adoc[
+General Ansible Role Development (Best) Practices].
+
+
 [[testing]]
 === Testing
 Automatic Tests are run on each Contribution using GitHub Workflows.
@@ -96,17 +107,6 @@ $ MOLECULE_DISTRO=centos7 tox
 
 For a list of possible values fed to `MOLECULE_DISTRO`,
 take a look at the matrix defined in link:.github/workflows/ci.yml[].
-
-
-[[development-guidelines]]
-=== 💁 Ansible Role Development Guidelines
-
-Please take a look at my https://github.com/JonasPammer/cookiecutter-ansible-role/blob/master/ROLE_DEVELOPMENT_GUIDELINES.adoc[
-Ansible Role Development Guidelines].
-
-If interested, I've also written down some
-https://github.com/JonasPammer/cookiecutter-ansible-role/blob/master/ROLE_DEVELOPMENT_TIPS.adoc[
-General Ansible Role Development (Best) Practices].
 
 
 [[development-container-extra]]
