@@ -83,7 +83,7 @@ as detailed in https://github.com/{{ cookiecutter.github_username }}/ansible-rol
 
 The System Requirements for local testing are as follows:
 
-* Python3 with <<development--dependencies>> installed
+* Python3 with <<development-dependencies>> installed
 * Docker
 
 To run the tests, simply run `tox` on the command line.
