@@ -121,7 +121,7 @@ To use it:
 
 1. Ensure you fullfill the link:https://code.visualstudio.com/docs/remote/containers#_system-requirements[
    the System requirements of Visual Studio Code Development Containers],
-   optionally following the _Installation_-Section of the linked page section. +
+   optionally following the __Installation__-Section of the linked page section. +
    This includes: Installing Docker, Installing Visual Studio Code itself, and Installing the necessary Extension.
 2. Clone the project to your machine
 3. Open the folder of the repo in Visual Studio Code (_File - Open Folder…_).
