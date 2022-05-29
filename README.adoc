@@ -19,19 +19,48 @@ https://github.com/JonasPammer/cookiecutter-ansible-role/actions/workflows/ci.ym
 Awesome https://github.com/cookiecutter/cookiecutter[Cookiecutter] template for creating
 https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html[Ansible Roles].
 
-https://github.com/cruft/cruft[
-Install Cruft] (e.g. using `python3 -m pip install --user cruft`)
-and issue the following command in the parent directory of this folder
-to get started:
-
-[subs="+quotes,attributes"]
-----
-user@machine:~/dev$ *cruft create https://github.com/JonasPammer/cookiecutter-ansible-role.git*
-----
-
 == Features
 
-=== General
+=== Ansible
+
+* Includes all Files and Folders expected to be found in an Ansible Role.
+* Every Ansible file starts with a conventional comment containing the name of the role and the purpose of the file
+* Includes Ansible Galaxy `meta.yml`
+* Includes Molecule Converge Definition with Docker and systemd-enabled Images
+* Uses single `vars/main.yml` paradigm instead of per-distribution file and include tasks paradigm, as shown below:
++
+[source,yaml]
+----
+_rolename_os_specific_var:app-name:
+  Alpine: …
+  Debian: …
+  Debian_9: …
+
+rolename_os_specific_var: "{{
+  _rolename_packages[ansible_distribution ~'_'~ ansible_distribution_major_version]|default(
+  rolename_packages[ansible_distribution] )|default(
+  _rolename_packages[ansible_os_family] ) }}"
+----
+
+=== Development
+
+* Includes a
+  https://code.visualstudio.com/docs/remote/containers[Visual Studio Code Development Container Definition].
+
+=== GitHub
+* Includes a Continuous GitHub *Workflow to `yamllint` / `ansiblelint` all files*
+* Includes a Continuous GitHub *Workflow to run `molecule` test's on a matrix of different OS's* (with systemd support)
+* Includes a GitHub *Workflow to release to Ansible Galaxy*
++
+[NOTE]
+====
+*Requires* a `GALAXY_API_KEY` secret present in the GitHub repository or organization!
+====
+
+
+== Generic Features
+
+=== Documentation
 
 * Includes the most Awesome README
 +
@@ -56,6 +85,10 @@ To do so, go to the _Settings_ page of your GitHub repository. Under _Pages / So
 * Includes a Beginner-Friendly Development Documentation file
 * Includes a Beginner-Friendly Contribution Documentation file, inspired by
   https://github.com/auth0/open-source-template/blob/master/GENERAL-CONTRIBUTING.md[Auth0's Open Source Template].
+
+
+=== Development
+
 * Assumes MIT License.
 * Includes numerous https://pre-commit.com/[pre-commit] hooks to automatically
   find linting issues, format your files, and find common issues of version control and source code
@@ -75,29 +108,6 @@ as *it is assumed that pull requests are squash-merged by maintainers*.
 * Includes a copy of the
   https://www.contributor-covenant.org/version/2/0/code_of_conduct/[Contributor Covenant Code of Conduct] as generated automatically by GitHub.
 
-* Includes a
-  https://code.visualstudio.com/docs/remote/containers[Visual Studio Code Development Container Definition].
-
-=== Ansible
-
-* Includes all Files and Folders expected to be found in an Ansible Role.
-* Every Ansible file starts with a conventional comment containing the name of the role and the purpose of the file
-* Includes Ansible Galaxy `meta.yml`
-* Includes Molecule Converge Definition with Docker and systemd-enabled Images
-* Uses single `vars/main.yml` paradigm instead of per-distribution file and include tasks paradigm, as shown below:
-+
-[source,yaml]
-----
-_rolename_os_specific_var:app-name:
-  Alpine: …
-  Debian: …
-  Debian_9: …
-
-rolename_os_specific_var: "{{
-  _rolename_packages[ansible_distribution ~'_'~ ansible_distribution_major_version]|default(
-  rolename_packages[ansible_distribution] )|default(
-  _rolename_packages[ansible_os_family] ) }}"
-----
 
 === GitHub
 
@@ -105,15 +115,6 @@ rolename_os_specific_var: "{{
 ====
 The resulting projects mentions that `pre-commit` installation is optional,
 as it is assumed that the project is included in your `pre-commit.ci` account projects.
-====
-
-* Includes a Continuous GitHub *Workflow to `yamllint` / `ansiblelint` all files*
-* Includes a Continuous GitHub *Workflow to run `molecule` test's on a matrix of different OS's* (with systemd support)
-* Includes a GitHub *Workflow to release to Ansible Galaxy*
-+
-[NOTE]
-====
-*Requires* a `GALAXY_API_KEY` secret present in the GitHub repository or organization!
 ====
 
 * Includes a `.gitattributes` file, ensuring LF line endings
