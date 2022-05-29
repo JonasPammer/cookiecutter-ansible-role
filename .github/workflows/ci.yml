@@ -18,6 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      ### GENERIC COOKIECUTTER INITIALIZATION STEPS ###
       - name: check out the codebase
         uses: actions/checkout@v3
 
@@ -25,6 +26,24 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: "3.x"
+
+      - name: setup/activate pre-commit cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pre-commit
+          key: ${{ hashFiles('**/.pre-commit-config.yaml') }}
+
+      - name: setup/activate cookiecutter-venv cache
+        uses: actions/cache@v3
+        with:
+          path: cookiecutter-venv
+          key: ${{ hashFiles('requirements-dev.txt') }}
+
+      - name: setup/activate project-venv cache
+        uses: actions/cache@v3
+        with:
+          path: project-venv
+          key: ${{ hashFiles('*/requirements-dev.txt') }}
 
       - name: install cookiecutter development dependencies
         run: |
@@ -52,6 +71,7 @@ jobs:
           pre-commit run --all-files --show-diff-on-failure
         working-directory: ./ansible-role-myrole
 
+      ### COOKIECUTTER SPECIFIC STEPS ###
       - name: Run tox in generated project
         run: |
           source project-venv/bin/activate
