@@ -3,10 +3,11 @@ default_context:
   email: "opensource@jonaspammer.at"
   code_of_conduct_enforcement_contact_email: "opensource@jonaspammer.at"
   github_username: "JonasPammer"
+
   galaxy_name: "jonaspammer"
   min_ansible_version: "2.9"
   allow_duplicates: "no"
   ansible_user_needs_to_become: true
-
+  
   role_name: "myrole"
   project_short_purpose: "installing something"
