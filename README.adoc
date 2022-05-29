@@ -16,6 +16,9 @@ endif::[]
 
 https://github.com/JonasPammer/cookiecutter-ansible-role/actions/workflows/ci.yml[image:https://github.com/JonasPammer/cookiecutter-ansible-role/actions/workflows/ci.yml/badge.svg[CI Status]]
 
+Awesome https://github.com/cookiecutter/cookiecutter[Cookiecutter] template for creating
+https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html[Ansible Roles].
+
 https://github.com/cruft/cruft[
 Install Cruft] (e.g. using `python3 -m pip install --user cruft`)
 and issue the following command in the parent directory of this folder
