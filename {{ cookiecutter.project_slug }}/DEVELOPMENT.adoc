@@ -180,10 +180,12 @@ Pull Requests even automatically get fixed by the same tool,
 at least by hooks that automatically alter files.
 
 [NOTE]
+====
 Not to confuse:
 Although some pre-commit hooks may be able to warn you about script-analyzed flaws in syntax or even code to some extend (for which reason pre-commit's hooks are *part of* the test suite),
 pre-commit itself does not run any real Test Suites.
 For Information on Testing, see <<testing>>.
+====
 
 [TIP]
 ====
