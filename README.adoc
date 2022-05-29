@@ -13,6 +13,9 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
+
+https://github.com/JonasPammer/cookiecutter-ansible-role/actions/workflows/ci.yml[image:https://github.com/JonasPammer/cookiecutter-ansible-role/actions/workflows/ci.yml/badge.svg[CI Status]]
+
 https://github.com/cruft/cruft[
 Install Cruft] (e.g. using `python3 -m pip install --user cruft`)
 and issue the following command in the parent directory of this folder
