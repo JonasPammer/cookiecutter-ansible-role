@@ -8,6 +8,6 @@ default_context:
   min_ansible_version: "2.9"
   allow_duplicates: "no"
   ansible_user_needs_to_become: true
-  
+
   role_name: "myrole"
   project_short_purpose: "installing something"
