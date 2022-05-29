@@ -106,12 +106,12 @@
   },
   {
     "name": "priority/low",
-    "color": "#0e8a16",
+    "color": "#0000FF",
     "description": "Categorizes a issue or PR as low priority."
   },
   {
     "name": "priority/high",
-    "color": "#d93f0b",
+    "color": "#FF0000",
     "description": "Categorizes a issue or PR as high priority."
   }
 ]
