@@ -3,6 +3,7 @@ Jonas Pammer <opensource@jonaspammer.at>;
 :toc:
 :toclevels: 3
 :toc-placement!:
+:cc-example-name: my-github-action
 
 ifdef::env-github[]
 // https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74#admonitions
@@ -56,6 +57,56 @@ rolename_os_specific_var: "{{
 ====
 *Requires* a `GALAXY_API_KEY` secret present in the GitHub repository or organization!
 ====
+
+
+== Usage
+
+First, get https://github.com/cruft/cruft[Cruft].
+It's a tool built in Cookiecutter that will allow you to keep up-to-date with the changes made to this cookiecutter.
+
+[subs="+quotes,attributes"]
+----
+$ *python3 -m pip install cruft*
+----
+
+Now run it against this repo:
+
+[subs="+quotes,attributes"]
+----
+$ *cruft create https://github.com/JonasPammer/cookiecutter-ansible-role.git*
+----
+
+Answer the prompts with your own desired options.
+
+Enter the project and take a look around:
+
+[subs="+quotes,attributes"]
+----
+$ *cd ##{cc-example-name}##*
+~/##{cc-example-name}##$ *ls*
+----
+
+Create a git repo and push it there:
+
+[subs="+quotes,attributes"]
+----
+~/##{cc-example-name}##$ *git init*
+~/##{cc-example-name}##$ *git add .*
+~/##{cc-example-name}##$ *git commit -m "chore: create from cookiecutter"*
+~/##{cc-example-name}##$ *git remote add origin git@github.com:##JonasPammer/{cc-example-name}##.git*
+~/##{cc-example-name}##$ *git push -u origin master*
+----
+
+Now take a look at your repo.
+Don't forget to carefully look at the generated README -
+It contains all relevant Development Documentation.
+
+Awesome, right?
+
+[NOTE]
+This CookieCutter does not configure your GitHub Repository.
+Please read the notes found in this README and perform the documented manual steps
+(e.g., Creating GitHub Action Secrets).
 
 
 == Generic Features
