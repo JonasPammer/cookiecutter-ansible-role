@@ -50,7 +50,7 @@ rolename_os_specific_var: "{{
 
 === GitHub
 * Includes a Continuous GitHub *Workflow to `yamllint` / `ansiblelint` all files*
-* Includes a Continuous GitHub *Workflow to run `molecule` test's on a matrix of different OS's* (with systemd support)
+* Includes a Continuous GitHub *Workflow to run `molecule` test's on a matrix of different OS's* (with systemd support) *and Ansible versions*
 * Includes a GitHub *Workflow to release to Ansible Galaxy*
 +
 [NOTE]
