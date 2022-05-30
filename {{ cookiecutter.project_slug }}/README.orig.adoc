@@ -18,13 +18,6 @@ endif::[]
 https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions/workflows/ci.yml[image:https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions/workflows/ci.yml/badge.svg[Testing CI]]
 
 
-ifdef::env-github[]
-[TIP]
-__A single-page version of this README can be found at https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.project_slug }}[
-{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.project_slug }}].__
-endif::[]
-
-
 An Ansible role for {{ cookiecutter.project_short_purpose }}.
 
 
