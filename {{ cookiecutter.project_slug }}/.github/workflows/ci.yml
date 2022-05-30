@@ -59,6 +59,10 @@ jobs:
       - name: Lint YAML (Standard Output)
         if: always()
         run: yamllint . -f standard
+
+      - name: Lint Ansible (GitHub Annotations)
+        if: always()
+        run: ansible-lint
   molecule:
     name: Molecule
     runs-on: ubuntu-latest
