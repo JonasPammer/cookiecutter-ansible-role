@@ -9,8 +9,8 @@
   "allow_duplicates": "no",
   "ansible_user_needs_to_become": true,
 
-  "_role_name": null,
-  "role_name": "{{ cookiecutter._role_name.lower().replace(' ', '_').replace('-', '_') }}",
-  "project_slug": "ansible-role-{{ cookiecutter.role_name }}",
+  "role_name": null,
+  "_role_name": "{{ cookiecutter._role_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_slug": "ansible-role-{{ cookiecutter._role_name }}",
   "project_short_purpose": null
 }

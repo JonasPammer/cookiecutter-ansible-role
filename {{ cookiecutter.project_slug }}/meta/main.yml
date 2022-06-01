@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: "{{ cookiecutter.role_name }}"
+  role_name: "{{ cookiecutter._role_name }}"
   description: "An ansible role for {{ cookiecutter.project_short_purpose }}."
 
   author: "{{ cookiecutter.galaxy_name }}"

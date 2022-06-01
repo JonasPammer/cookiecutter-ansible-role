@@ -1,2 +1,2 @@
 ---
-# handlers file of ansible-role {{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}
+# handlers file of ansible-role {{ cookiecutter.galaxy_name }}.{{ cookiecutter._role_name }}

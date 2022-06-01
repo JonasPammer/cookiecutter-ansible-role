@@ -27,7 +27,7 @@ body:
           name: Role Test
 
           roles:
-            - {{ cookiecutter.role_name }}
+            - {{ cookiecutter._role_name }}
       render: yaml
     validations:
       required: true
