@@ -1,15 +1,15 @@
 ---
-# vars file of ansible-role {{ cookiecutter.galaxy_name }}.{{ cookiecutter._role_name }}
+# vars file of ansible-role {{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}
 # (tl;dr: almost not overwrite-able variables)
 
-_{{ cookiecutter._role_name }}_somevar:
+_{{ cookiecutter.role_name }}_somevar:
   Debian: ""
   Debian_10: ""
   RedHat: ""
 
-{{ cookiecutter._role_name }}_somevar: "{% raw %}{{{% endraw %}
-  _{{ cookiecutter._role_name }}_somevar[ansible_distribution ~ '_' ~ ansible_distribution_major_version]|default(
-  _{{ cookiecutter._role_name }}_somevar[ansible_os_family ~ '_' ~ ansible_distribution_major_version])|default(
-  _{{ cookiecutter._role_name }}_somevar[ansible_distribution])|default(
-  _{{ cookiecutter._role_name }}_somevar[ansible_os_family])|default(
-  _{{ cookiecutter._role_name }}_somevar['default']) {% raw %}}}{% endraw %}"
+{{ cookiecutter.role_name }}_somevar: "{% raw %}{{{% endraw %}
+  _{{ cookiecutter.role_name }}_somevar[ansible_distribution ~ '_' ~ ansible_distribution_major_version]|default(
+  _{{ cookiecutter.role_name }}_somevar[ansible_os_family ~ '_' ~ ansible_distribution_major_version])|default(
+  _{{ cookiecutter.role_name }}_somevar[ansible_distribution])|default(
+  _{{ cookiecutter.role_name }}_somevar[ansible_os_family])|default(
+  _{{ cookiecutter.role_name }}_somevar['default']) {% raw %}}}{% endraw %}"

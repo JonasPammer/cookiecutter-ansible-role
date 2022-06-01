@@ -1,5 +1,5 @@
 ---
-# tasks file of ansible-role {{ cookiecutter.galaxy_name }}.{{ cookiecutter._role_name }}
+# tasks file of ansible-role {{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}
 
 - name: check if all variables have been set correctly
   ansible.builtin.import_tasks: assert.yml

@@ -116,8 +116,8 @@ include::molecule/resources/prepare.yml[]
 The following diagram is a compilation of the "soft dependencies" of this role
 as well as the recursive tree of their soft dependencies.
 
-image:https://raw.githubusercontent.com/{{ cookiecutter.github_username }}/ansible-roles/master/graphs/dependencies_{{ cookiecutter._role_name }}.svg[
-requirements.yml dependency graph of {{ cookiecutter.galaxy_name }}.{{ cookiecutter._role_name }}]
+image:https://raw.githubusercontent.com/{{ cookiecutter.github_username }}/ansible-roles/master/graphs/dependencies_{{ cookiecutter.role_name }}.svg[
+requirements.yml dependency graph of {{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}]
 ====
 
 .Minimum Viable Play
@@ -125,7 +125,7 @@ requirements.yml dependency graph of {{ cookiecutter.galaxy_name }}.{{ cookiecut
 [source,yaml]
 ----
 roles:
-  - "{{ cookiecutter.galaxy_name }}.{{ cookiecutter._role_name }}"
+  - "{{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}"
 
 vars:
   some_var: "some_value"

@@ -13,7 +13,7 @@ permissions: read-all
 
 defaults:
   run:
-    working-directory: "{{ cookiecutter.galaxy_name }}.{{ cookiecutter._role_name }}"
+    working-directory: "{{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}"
 
 jobs:
   release:
@@ -23,7 +23,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v3
         with:
-          path: "{{ cookiecutter.galaxy_name }}.{{ cookiecutter._role_name }}"
+          path: "{{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}"
 
       - name: Set up Python 3.
         uses: actions/setup-python@v3
