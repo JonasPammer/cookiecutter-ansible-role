@@ -10,6 +10,11 @@
     "description": "Categorizes issue or PR as related to a bug (i.e. something is not working)."
   },
   {
+    "name": "kind/test",
+    "color": "#775fcb",
+    "description": "Categorizes issue or PR addressing tests (missing, adding, problem)."
+  },
+  {
     "name": "kind/documentation",
     "color": "#0075ca",
     "description": "Categorizes issue or PR as related to documentation."
@@ -18,6 +23,11 @@
     "name": "kind/security",
     "color": "#775fcb",
     "description": "Categorizes issue or PR as related to security."
+  },
+  {
+    "name": "kind/infrastructure",
+    "color": "#775fcb",
+    "description": "Categorizes issue or PR improving development/releases/Continious Integration (CI)."
   },
   {
     "name": "kind/dependencies",
