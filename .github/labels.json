@@ -30,6 +30,7 @@
     "description": "Categorizes issues related to questions."
   },
   
+  
   {
     "name": "needs-triage",
     "color": "EDEDED",
@@ -62,11 +63,6 @@
   },
   
   {
-    "name": "needs-triage",
-    "color": "EDEDED",
-    "description": "Indicates an issue or PR lacks a `triage/foo` label and requires one."
-  },
-  {
     "name": "good first issue",
     "color": "7057ff",
     "description": "Denotes an issue ready for a new contributor."
@@ -80,12 +76,12 @@
   {
     "name": "priority/low",
     "color": "#0000FF",
-    "description": "Categorizes a issue or PR as low priority."
+    "description": "Categorizes issues or PRs as low priority."
   },
   {
     "name": "priority/high",
     "color": "#FF0000",
-    "description": "Categorizes a issue or PR as high priority."
+    "description": "Categorizes issues or PRs as high priority."
   },
   
   {
