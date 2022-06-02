@@ -1,13 +1,13 @@
 [
   {
+    "name": "kind/feature",
+    "color": "a2eeef",
+    "description": "Categorizes issue or PR as related to a new feature."
+  },
+  {
     "name": "kind/bug",
     "color": "d73a4a",
     "description": "Categorizes issue or PR as related to a bug (i.e. something is not working)."
-  },
-  {
-    "name": "kind/dependencies",
-    "color": "ededed",
-    "description": "Categorizes pull requests that update a dependency file."
   },
   {
     "name": "kind/documentation",
@@ -15,20 +15,21 @@
     "description": "Categorizes issue or PR as related to documentation."
   },
   {
-    "name": "kind/feature",
-    "color": "a2eeef",
-    "description": "Categorizes issue or PR as related to a new feature."
+    "name": "kind/security",
+    "color": "775fcb",
+    "description": "Categorizes issue or PR as related to security."
+  },
+  {
+    "name": "kind/dependencies",
+    "color": "ededed",
+    "description": "Categorizes pull requests that update a dependency file."
   },
   {
     "name": "kind/support",
     "color": "775fcb",
     "description": "Categorizes issues related to questions."
   },
-  {
-    "name": "kind/security",
-    "color": "775fcb",
-    "description": "Categorizes issue or PR as related to security."
-  },
+  
   {
     "name": "needs-triage",
     "color": "EDEDED",
@@ -59,6 +60,7 @@
     "color": "ffffff",
     "description": "This will not be worked on"
   },
+  
   {
     "name": "needs-triage",
     "color": "EDEDED",
@@ -74,6 +76,18 @@
     "color": "008672",
     "description": "Denotes an issue that needs help from other contributors."
   },
+  
+  {
+    "name": "priority/low",
+    "color": "#0000FF",
+    "description": "Categorizes a issue or PR as low priority."
+  },
+  {
+    "name": "priority/high",
+    "color": "#FF0000",
+    "description": "Categorizes a issue or PR as high priority."
+  },
+  
   {
     "name": "size/XS",
     "color": "#009900",
@@ -103,15 +117,5 @@
     "name": "size/XXL",
     "color": "#ee0000",
     "description": "Denotes a PR that changes 1000+ lines, ignoring generated files."
-  },
-  {
-    "name": "priority/low",
-    "color": "#0000FF",
-    "description": "Categorizes a issue or PR as low priority."
-  },
-  {
-    "name": "priority/high",
-    "color": "#FF0000",
-    "description": "Categorizes a issue or PR as high priority."
   }
 ]
