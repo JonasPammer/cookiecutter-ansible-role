@@ -1,75 +1,75 @@
 [
   {
     "name": "kind/feature",
-    "color": "a2eeef",
+    "color": "#a2eeef",
     "description": "Categorizes issue or PR as related to a new feature."
   },
   {
     "name": "kind/bug",
-    "color": "d73a4a",
+    "color": "#d73a4a",
     "description": "Categorizes issue or PR as related to a bug (i.e. something is not working)."
   },
   {
     "name": "kind/documentation",
-    "color": "0075ca",
+    "color": "#0075ca",
     "description": "Categorizes issue or PR as related to documentation."
   },
   {
     "name": "kind/security",
-    "color": "775fcb",
+    "color": "#775fcb",
     "description": "Categorizes issue or PR as related to security."
   },
   {
     "name": "kind/dependencies",
-    "color": "ededed",
+    "color": "#ededed",
     "description": "Categorizes pull requests that update a dependency file."
   },
   {
     "name": "kind/support",
-    "color": "775fcb",
+    "color": "#775fcb",
     "description": "Categorizes issues related to questions."
   },
   
   
   {
     "name": "needs-triage",
-    "color": "EDEDED",
+    "color": "#EDEDED",
     "description": "Indicates an issue or PR lacks a `triage/foo` label and requires one."
   },
   {
     "name": "triage/duplicate",
-    "color": "D455D0",
+    "color": "#D455D0",
     "description": "Indicates an issue is a duplicate of other open issue."
   },
   {
     "name": "triage/needs-information",
-    "color": "D455D0",
+    "color": "#D455D0",
     "description": "Indicates an issue needs more information in order to work on it."
   },
   {
     "name": "triage/not-reproducible",
-    "color": "D455D0",
+    "color": "#D455D0",
     "description": "Indicates an issue can not be reproduced as described."
   },
   {
     "name": "triage/accepted",
-    "color": "8FC951",
+    "color": "#8FC951",
     "description": "Indicates an issue or PR is ready to be actively worked on."
   },
   {
     "name": "triage/wontfix",
-    "color": "ffffff",
+    "color": "#ffffff",
     "description": "This will not be worked on"
   },
   
   {
     "name": "good first issue",
-    "color": "7057ff",
+    "color": "#7057ff",
     "description": "Denotes an issue ready for a new contributor."
   },
   {
     "name": "help wanted",
-    "color": "008672",
+    "color": "#008672",
     "description": "Denotes an issue that needs help from other contributors."
   },
   
