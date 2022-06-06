@@ -20,6 +20,7 @@ https://github.com/JonasPammer/cookiecutter-ansible-role/actions/workflows/ci.ym
 Awesome https://github.com/cookiecutter/cookiecutter[Cookiecutter] template for creating
 https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html[Ansible Roles].
 
+
 == Features
 
 === Ansible
