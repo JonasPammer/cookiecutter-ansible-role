@@ -39,8 +39,8 @@
     "color": "#775fcb",
     "description": "Categorizes issues related to questions."
   },
-  
-  
+
+
   {
     "name": "needs-triage",
     "color": "#EDEDED",
@@ -71,7 +71,7 @@
     "color": "#ffffff",
     "description": "This will not be worked on"
   },
-  
+
   {
     "name": "good first issue",
     "color": "#7057ff",
@@ -82,7 +82,7 @@
     "color": "#008672",
     "description": "Denotes an issue that needs help from other contributors."
   },
-  
+
   {
     "name": "priority/low",
     "color": "#0000FF",
@@ -93,7 +93,7 @@
     "color": "#FF0000",
     "description": "Categorizes issues or PRs as high priority."
   },
-  
+
   {
     "name": "size/XS",
     "color": "#009900",
