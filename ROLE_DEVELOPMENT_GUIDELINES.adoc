@@ -100,7 +100,7 @@ apache__vhosts_version: "2.2"
 ----
 - name: Ensure Apache service is started and enabled on boot.
   service:
-    name: "{{ apache_service }}"
+    name: "{{ apache__service }}"
     state: started
     enabled: true
 ----
@@ -204,7 +204,7 @@ apache__vhosts_version: "2.2"
 ----
 - name: Ensure Apache service is started and enabled on boot.
   service:
-    name: "{{ apache_service }}"
+    name: "{{ apache__service }}"
     state: started
     enabled: true
 ----
