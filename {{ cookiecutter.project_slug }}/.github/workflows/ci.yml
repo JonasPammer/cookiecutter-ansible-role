@@ -98,6 +98,7 @@ jobs:
       - name: Run Molecule tests (normal).
         run: tox
         env:
+          TOX_SKIP_ENV: pre-commit
           MOLECULE_DISTRO: {% raw %}${{ matrix.distro }}{% endraw %}
           TOX_PARALLEL_NO_SPINNER: 1
         if: {% raw %}${{ github.event_name != 'workflow_dispatch' }}{% endraw %}
@@ -105,6 +106,7 @@ jobs:
       - name: Run Molecule tests (debug).
         run: tox
         env:
+          TOX_SKIP_ENV: pre-commit
           MOLECULE_DESTROY: never
           MOLECULE_DISTRO: {% raw %}${{ matrix.distro }}{% endraw %}
           TOX_PARALLEL_NO_SPINNER: 1
