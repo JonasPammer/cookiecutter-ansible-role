@@ -115,3 +115,4 @@ jobs:
       - name: setup tmate session if previous step failed and if this is a manual run
         if: {% raw %}${{ failure() && github.event_name == 'workflow_dispatch' }}{% endraw %}
         uses: mxschmitt/action-tmate@v3
+        timeout-minutes: 30
