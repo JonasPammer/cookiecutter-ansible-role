@@ -39,11 +39,11 @@ _rolename__somevar:
   RedHat: ""
 
 rolename__somevar: "{{
-  _rolename_somevar[ansible_distribution ~ '_' ~ ansible_distribution_major_version]|default(
-  _rolename_somevar[ansible_os_family ~ '_' ~ ansible_distribution_major_version])|default(
-  _rolename_somevar[ansible_distribution])|default(
-  _rolename_somevar[ansible_os_family])|default(
-  _rolename_somevar['default']) }}"
+  _rolename__somevar[ansible_distribution ~ '_' ~ ansible_distribution_major_version]|default(
+  _rolename__somevar[ansible_os_family ~ '_' ~ ansible_distribution_major_version])|default(
+  _rolename__somevar[ansible_distribution])|default(
+  _rolename__somevar[ansible_os_family])|default(
+  _rolename__somevar['default']) }}"
 ----
 
 === Development
