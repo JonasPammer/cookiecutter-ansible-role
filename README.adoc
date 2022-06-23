@@ -33,15 +33,17 @@ https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html[An
 +
 [source,yaml]
 ----
-_rolename_os_specific_var:app-name:
-  Alpine: …
-  Debian: …
-  Debian_9: …
+_rolename__somevar:
+  Debian: ""
+  Debian_10: ""
+  RedHat: ""
 
-rolename_os_specific_var: "{{
-  _rolename_packages[ansible_distribution ~'_'~ ansible_distribution_major_version]|default(
-  rolename_packages[ansible_distribution] )|default(
-  _rolename_packages[ansible_os_family] ) }}"
+rolename__somevar: "{{
+  _rolename_somevar[ansible_distribution ~ '_' ~ ansible_distribution_major_version]|default(
+  _rolename_somevar[ansible_os_family ~ '_' ~ ansible_distribution_major_version])|default(
+  _rolename_somevar[ansible_distribution])|default(
+  _rolename_somevar[ansible_os_family])|default(
+  _rolename_somevar['default']) }}"
 ----
 
 === Development
