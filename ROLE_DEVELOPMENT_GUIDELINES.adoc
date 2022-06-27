@@ -146,7 +146,7 @@ apache__vhosts_version: "2.2"
   ansible.builtin.assert:
     that:
       - apache_packages is defined
-      - apache_packages \| type_debug in ["list", "string"]
+      - apache_packages is string or apache_packages is iterable
     quiet: true
 ----
 |===
