@@ -94,12 +94,12 @@ jobs:
           - ubuntu2004
 
     env:
-      {% raw %}
+      {%- raw -%}
       WORKFLOW_DISPATCH_IF: >-
         ${{github.event_name == 'workflow_dispatch' &&
            (github.event.inputs.distro == 'ALL' ||
             contains(matrix.distro, github.event.inputs.distro)) }}
-      {% endraw %}
+      {%- endraw -%}
 
     steps:
       - name: If this step is not skipped, this is a FAKE ci run.
