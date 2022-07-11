@@ -94,10 +94,12 @@ jobs:
           - ubuntu2004
 
     env:
+      {% raw %}
       WORKFLOW_DISPATCH_IF: >-
         ${{github.event_name == 'workflow_dispatch' &&
            (github.event.inputs.distro == 'ALL' ||
             contains(matrix.distro, github.event.inputs.distro)) }}
+      {% endraw %}
 
     steps:
       - name: If this step is not skipped, this is a FAKE ci run.
@@ -145,6 +147,6 @@ jobs:
         if: env.WORKFLOW_DISPATCH_IF == 'true'
 
       - name: setup tmate session if previous step failed and if this is a manual run
-        if: failure() && env.WORKFLOW_DISPATCH_IF == 'true'
+        if: {% raw %}failure() && env.WORKFLOW_DISPATCH_IF == 'true'{% endraw %}
         uses: mxschmitt/action-tmate@v3
         timeout-minutes: 30
