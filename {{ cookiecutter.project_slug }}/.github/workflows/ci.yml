@@ -9,6 +9,22 @@ permissions: read-all
         required: true
         default: true
         type: boolean
+      distro:
+        description: "Select a Distribution to run"
+        required: false
+        type: choice
+        default: "ALL"
+        options:
+          - ALL
+          - centos7
+          - centos8
+          - debian10
+          - debian11
+          - fedora35
+          - rockylinux8
+          - ubuntu1604
+          - ubuntu1804
+          - ubuntu2004
   pull_request:
   push:
     branches:
@@ -77,7 +93,23 @@ jobs:
           - ubuntu1804
           - ubuntu2004
 
+    env:
+      WORKFLOW_DISPATCH_IF: >-
+        ${{github.event_name == 'workflow_dispatch' &&
+           (github.event.inputs.distro == 'ALL' ||
+            contains(matrix.distro, github.event.inputs.distro)) }}
+
     steps:
+      - name: If this step is not skipped, this is a FAKE ci run.
+        run: >
+          cat << EOF
+            If this step is NOT skipped, this workflow run was manually dispatched
+            and the chosen distro does not match the current matrix distro.
+            This is a hack because GitHub CI does not allow for a state other than "failed"
+            as per https://github.com/actions/runner/issues/662
+          EOF
+        if: env.WORKFLOW_DISPATCH_IF == 'false'
+
       - name: check out the codebase
         uses: actions/checkout@v3
 
@@ -110,9 +142,9 @@ jobs:
           MOLECULE_DESTROY: never
           MOLECULE_DISTRO: {% raw %}${{ matrix.distro }}{% endraw %}
           TOX_PARALLEL_NO_SPINNER: 1
-        if: {% raw %}${{ github.event_name == 'workflow_dispatch' }}{% endraw %}
+        if: env.WORKFLOW_DISPATCH_IF == 'true'
 
       - name: setup tmate session if previous step failed and if this is a manual run
-        if: {% raw %}${{ failure() && github.event_name == 'workflow_dispatch' }}{% endraw %}
+        if: failure() && env.WORKFLOW_DISPATCH_IF == 'true'
         uses: mxschmitt/action-tmate@v3
         timeout-minutes: 30
