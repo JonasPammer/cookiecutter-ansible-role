@@ -149,7 +149,7 @@ jobs:
       - name: Upload output of /molecule/resources/debug.yml as CI Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: debug-${{ matrix.distro }}.yml
+          name: {% raw %}debug-${{ matrix.distro }}.yml{% endraw %}
           path: |
             /var/tmp/vars.yml
             /var/tmp/environment.yml
