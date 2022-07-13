@@ -150,7 +150,7 @@ jobs:
       - name: Run Molecule tests (debug).
         run: tox
         env:
-          TOXENV: py3-${{ github.event.inputs.ansible_version }}
+          TOXENV: py3-{% raw %}${{ github.event.inputs.ansible_version }}{% endraw %}
           TOX_SKIP_ENV: pre-commit
           TOX_PARALLEL_NO_SPINNER: 1
           MOLECULE_DISTRO: {% raw %}${{ matrix.distro }}{% endraw %}
