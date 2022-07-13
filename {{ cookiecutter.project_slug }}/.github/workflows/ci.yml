@@ -133,17 +133,17 @@ jobs:
         run: tox
         env:
           TOX_SKIP_ENV: pre-commit
-          MOLECULE_DISTRO: {% raw %}${{ matrix.distro }}{% endraw %}
           TOX_PARALLEL_NO_SPINNER: 1
+          MOLECULE_DISTRO: {% raw %}${{ matrix.distro }}{% endraw %}
         if: {% raw %}${{ github.event_name != 'workflow_dispatch' }}{% endraw %}
 
       - name: Run Molecule tests (debug).
         run: tox
         env:
           TOX_SKIP_ENV: pre-commit
-          MOLECULE_DESTROY: never
-          MOLECULE_DISTRO: {% raw %}${{ matrix.distro }}{% endraw %}
           TOX_PARALLEL_NO_SPINNER: 1
+          MOLECULE_DISTRO: {% raw %}${{ matrix.distro }}{% endraw %}
+          MOLECULE_DESTROY: never
         if: env.WORKFLOW_DISPATCH_IF == 'true'
 
       - name: Upload output of /molecule/resources/debug.yml as CI Artifact
