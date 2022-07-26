@@ -1,7 +1,7 @@
 = CookieCutter Ansible Role
 Jonas Pammer <opensource@jonaspammer.at>;
 :toc:
-:toclevels: 3
+:toclevels: 2
 :toc-placement!:
 :cc-example-name: my-github-action
 
@@ -20,8 +20,10 @@ https://github.com/JonasPammer/cookiecutter-ansible-role/actions/workflows/ci.ym
 Awesome https://github.com/cookiecutter/cookiecutter[Cookiecutter] template for creating
 https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html[Ansible Roles].
 
+toc::[]
 
-== Features
+
+== Primary Features
 
 === Ansible
 
@@ -115,7 +117,7 @@ Please read the notes found in this README and perform the documented manual ste
 (e.g., Creating GitHub Action Secrets).
 
 
-== Generic Features
+== Generic Features of this 🍪
 
 I maintain several CookieCutter's.
 Many of them share a similiar set of boilerplate files.
@@ -150,6 +152,7 @@ To do so, go to the _Settings_ page of your GitHub repository. Under _Pages / So
 === Development
 
 * Assumes MIT License.
+* Changelog is assumed to be managed through the use of GitHub Releases.
 * Includes numerous https://pre-commit.com/[pre-commit] hooks to automatically
   find linting issues, format your files, and find common issues of version control and source code
 * Includes a very much standard
@@ -186,4 +189,4 @@ as it is assumed that the project is included in your `pre-commit.ci` account pr
   https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates[Dependabot]
   configuration file to check for updates of used GitHub Actions themselves on a monthly basis
 * Includes a GitHub Workflow to *declaratively manage labels*
-** The predefined `labels.json` is inspired by the kubernetes project
+** The predefined labels definition is inspired by the kubernetes project
