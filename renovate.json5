@@ -20,7 +20,7 @@
   "lockFileMaintenance": { "enabled": true },
   "semanticCommits": "enabled",
   "stabilityDays": 3,
-  
+
   "labels": ["kind/dependencies"],
   "packageRules": [
     {
