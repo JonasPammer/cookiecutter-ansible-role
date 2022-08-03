@@ -35,7 +35,7 @@
   ],
   "vulnerabilityAlerts": {
     "labels": ["kind/dependencies", "kind/security"],
-  }
+  },
   "rebaseLabel": "renovate/rebase",
   "stopUpdatingLabel": "renovate/stop-updating",
 }
