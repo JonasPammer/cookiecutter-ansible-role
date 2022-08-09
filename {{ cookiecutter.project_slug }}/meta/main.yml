@@ -4,7 +4,7 @@ galaxy_info:
   description: "An ansible role for {{ cookiecutter.project_short_purpose }}."
 
   author: "{{ cookiecutter.galaxy_name }}"
-  license: "{{ cookiecutter.open_source_license }}"
+  license: "{{ cookiecutter.open_source_license[1] }}"
 
   min_ansible_version: "{{ cookiecutter.min_ansible_version }}"
   platforms:
