@@ -3,6 +3,17 @@
   "email": "opensource@jonaspammer.at",
   "code_of_conduct_enforcement_contact_email": "opensource@jonaspammer.at",
   "github_username": "JonasPammer",
+  "open_source_license": [
+    "MIT License",
+    "The Unlicense",
+    "Boost Software License 1.0",
+    "Apache License 2.0",
+    "Mozilla Public License 2.0",
+    "GNU LGPLv3",
+    "GNU GPLv3",
+    "GNU APGLv3",
+    "Not open source"
+  ],
 
   "galaxy_name": "jonaspammer",
   "min_ansible_version": "2.11",
