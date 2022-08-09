@@ -33,18 +33,6 @@ jobs:
           path: ~/.cache/pre-commit
           key: ${{ hashFiles('**/.pre-commit-config.yaml') }}
 
-      - name: setup/activate cookiecutter-venv cache
-        uses: actions/cache@f4278025ab0f432ce369118909e46deec636f50c # tag=v3
-        with:
-          path: cookiecutter-venv
-          key: ${{ hashFiles('requirements-dev.txt') }}
-
-      - name: setup/activate project-venv cache
-        uses: actions/cache@f4278025ab0f432ce369118909e46deec636f50c # tag=v3
-        with:
-          path: project-venv
-          key: ${{ hashFiles('*/requirements-dev.txt') }}
-
       - name: install cookiecutter development dependencies
         run: |
           python3 -m venv cookiecutter-venv
