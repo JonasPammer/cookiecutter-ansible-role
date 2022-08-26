@@ -39,3 +39,7 @@ jobs:
         run: >-
           ansible-galaxy role import --api-key {% raw %}${{ secrets.GALAXY_API_KEY }}{% endraw %}
           $(echo {% raw %}${{ github.repository }}{% endraw %} | cut -d/ -f1) $(echo {% raw %}${{ github.repository }}{% endraw %} | cut -d/ -f2)
+
+      - name: debug galaxy role id
+        run: |
+          ansible-galaxy info {{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }} | grep -E 'id: [0-9]' | awk {'print $2'}
