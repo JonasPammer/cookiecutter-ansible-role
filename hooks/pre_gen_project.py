@@ -23,8 +23,7 @@ assert (
     "{%raw%}{{{%endraw%}" not in role_name
 ), "'{}' role_name contains {%raw%}{{{%endraw%}".format(role_name)
 
-try:
-    role_name_ = "{{ cookiecutter.role_name_ }}"
+
+role_name_ = "{{ cookiecutter.role_name_ | default(None) }}"
+if role_name_ is not None:
     print("NOTE: role_name_ can be removed from your .cruft.json file (See https://github.com/JonasPammer/cookiecutter-ansible-role/pull/40)".format(role_name_))
-except: # jinja2.exceptions.UndefinedError
-    pass
