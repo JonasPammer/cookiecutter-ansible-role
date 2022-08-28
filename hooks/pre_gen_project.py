@@ -1,6 +1,6 @@
 """
-NOTE - This file is jinja2'd by cookiecutter before its being executed, 
-meaning code inside jinja2 delimiters (even in comments) are parsed/replaced 
+NOTE - This file is jinja2'd by cookiecutter before its being executed,
+meaning code inside jinja2 delimiters (even in comments) are parsed/replaced
 and may even contain code that executes/calls cookiecutter functions (e.g. `update`).
 So please do not remove any comments like these as they actually do stuff.
 
