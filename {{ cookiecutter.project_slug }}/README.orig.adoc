@@ -93,14 +93,14 @@ is meant to be used not just internally.
 // Checkout https://github.com/tribe29/ansible-collection-tribe29.checkmk/blob/main/roles/server/README.md#tags
 // for an awesome example of grouping tasks using tags
 
-Tasks are tagged with the following 
+Tasks are tagged with the following
 https://docs.ansible.com/ansible/latest/user_guide/playbooks_tags.html#adding-tags-to-roles[tags]:
 
 [cols="1,1"]
 |===
 |Tag | Purpose
 
-2+| This role does not have officially documented tags yet. 
+2+| This role does not have officially documented tags yet.
 // |Cell in column 1, row 2
 // |Cell in column 2, row 2
 |===
