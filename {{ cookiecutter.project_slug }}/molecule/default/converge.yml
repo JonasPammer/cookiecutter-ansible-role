@@ -3,4 +3,4 @@
   hosts: all
 
   roles:
-    - role: "{{ cookiecutter.project_slug }}"
+    - name: "{{ cookiecutter.project_slug }}"

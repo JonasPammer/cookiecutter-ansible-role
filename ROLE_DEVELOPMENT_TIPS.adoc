@@ -70,12 +70,12 @@ A role should always be more than a single task file.
 ---
 - hosts: webservers
   roles:
-  - role: apache_simple
+  - name: apache_simple
     apache_http_port: 80
     apache_doc_root: /var/www/html
     apache_user: www-data
     apache_group: www-data
-  - role: apache_simple
+  - name: apache_simple
     apache_http_port: 8080
     apache_doc_root: /www/example.com
     apache_user: www-data
@@ -89,8 +89,8 @@ A role should always be more than a single task file.
 ---
 - hosts: webservers
   roles:
-  - role: apache_simple
-  - role: apache_simple
+  - name: apache_simple
+  - name: apache_simple
     apache_http_port: 8080
     apache_doc_root: /www/example.com
 -----
