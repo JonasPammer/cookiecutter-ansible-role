@@ -5,7 +5,7 @@
   // renovation handled by cookiecutter and https://github.com/{{ cookiecutter.github_username }}/ansible-roles script
   "enabled": false,
 {%- endif %}
-  
+
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   extends: [
     // explicit version of "config:base" from https://docs.renovatebot.com/presets-config
