@@ -19,6 +19,7 @@
   "min_ansible_version": "2.11",
   "allow_duplicates": "no",
   "ansible_user_needs_to_become": true,
+  "use_renovate": false,
 
   "role_name": null,
   "project_slug": "ansible-role-{{ cookiecutter.role_name.lower().replace(' ', '_').replace('-', '_') }}",
