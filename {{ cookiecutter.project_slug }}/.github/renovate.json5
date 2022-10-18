@@ -37,7 +37,6 @@
   lockFileMaintenance: { enabled: true },
   stabilityDays: 7,
 
-  labels: ["kind/dependencies"],
   packageRules: [
     {
       matchPackagePatterns: ["eslint"],
@@ -51,6 +50,7 @@
   vulnerabilityAlerts: {
     labels: ["kind/dependencies", "kind/security"],
   },
+  labels: ["kind/dependencies"],
   rebaseLabel: "renovate/rebase",
-  stopUpdatingLabel: "renovate/stop-updating",
+  stopUpdatingLabel: "renovate/stop-updating"
 }
