@@ -1,5 +1,5 @@
 {
-{% if cookiecutter.use_renovate == 'y' -%}
+{%- if cookiecutter.use_renovate == 'y' %}
   enabled: true,
 {%- else %}
   // renovation handled by cookiecutter and https://github.com/{{ cookiecutter.github_username }}/ansible-roles script
@@ -52,5 +52,5 @@
   },
   labels: ["kind/dependencies"],
   rebaseLabel: "renovate/rebase",
-  stopUpdatingLabel: "renovate/stop-updating"
+  stopUpdatingLabel: "renovate/stop-updating",
 }
