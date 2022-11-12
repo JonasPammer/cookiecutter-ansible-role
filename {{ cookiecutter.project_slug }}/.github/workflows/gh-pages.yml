@@ -70,10 +70,10 @@ jobs:
       - name: Generate HTML
         run: asciidoctor --backend=html5 --destination-dir docs --out-file index.html README.adoc
 
-      - name: Deploy HTML to GitHub Pages (when branch is master)
+      - name: Deploy HTML to GitHub Pages (when branch is master).
         uses: peaceiris/actions-gh-pages@068dc23d9710f1ba62e86896f84735d869951305 # tag=v3
         with:
-          github_token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
+          github_token: "{% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}"
           publish_branch: gh-pages
           publish_dir: ./docs/
         if: github.ref == 'refs/heads/master'
