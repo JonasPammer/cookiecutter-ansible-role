@@ -153,7 +153,7 @@ requirements.yml dependency graph of {{ cookiecutter.galaxy_name }}.{{ cookiecut
 [source,yaml]
 ----
 roles:
-  - {{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}
+  - role: {{ cookiecutter.galaxy_name }}.{{ cookiecutter.role_name }}
 
 vars:
   some_var: "some_value"
