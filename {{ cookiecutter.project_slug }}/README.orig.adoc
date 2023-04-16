@@ -162,7 +162,7 @@ vars:
 
 
 [[tested-distributions]]
-=== 🧪 Tested Distributions
+== 🧪 Tested Distributions
 
 A role may work on different *distributions*, like Red Hat Enterprise Linux (RHEL),
 even though there is no test for this exact distribution.
@@ -222,7 +222,7 @@ even though there is no test for this exact distribution.
 
 
 [[tested-ansible-versions]]
-=== 🧪 Tested Ansible versions
+== 🧪 Tested Ansible versions
 
 The tested ansible versions try to stay equivalent with the
 https://github.com/ansible-collections/community.general#tested-with-ansible[
