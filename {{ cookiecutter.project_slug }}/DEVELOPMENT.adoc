@@ -46,10 +46,9 @@ takes care of importing the role to my Ansible Galaxy Account.
 === 🧪 Testing
 Automatic Tests are run on each Contribution using GitHub Workflows.
 
-The Tests primarily resolve around running
-https://molecule.readthedocs.io/en/latest/[Molecule]
-on a varying set of linux distributions and using various ansible versions,
-as detailed in https://github.com/{{ cookiecutter.github_username }}/ansible-roles[{{ cookiecutter.github_username }}/ansible-roles].
+The Tests primarily resolve around running https://molecule.readthedocs.io/en/latest/[Molecule]
+on a <<tested-distributions,varying set of linux distributions>>
+and using <<tested-ansible-versions,various ansible versions>>.
 
 The molecule test also includes a step which lints all ansible playbooks using
 https://github.com/ansible/ansible-lint#readme[`ansible-lint`]
@@ -119,6 +118,7 @@ You may also want to know that the files mentioned in the admonition above
 are attached to the *GitHub CI Artifacts* of a given Workflow run. +
 This allows one to check the difference between runs
 and thus help in debugging what caused the bit-rot or failure in general.
+
 image::https://user-images.githubusercontent.com/32995541/178442403-e15264ca-433a-4bc7-95db-cfadb573db3c.png[]
 =====
 
