@@ -227,7 +227,7 @@ even though there is no test for this exact distribution.
 
 | Debian
 | Ubuntu 2004
-| 2021-09
+| 2021-04
 | 2030-04
 | https://github.com/geerlingguy/docker-ubuntu2004-ansible/actions?query=workflow%3ABuild[image:https://github.com/geerlingguy/docker-ubuntu2004-ansible/workflows/Build/badge.svg?branch=master[CI]]
 
@@ -246,7 +246,7 @@ even though there is no test for this exact distribution.
 | Debian
 | Debian 11
 | 2021-08
-| ?
+| 2024-07~
 | https://github.com/geerlingguy/docker-debian11-ansible/actions?query=workflow%3ABuild[image:https://github.com/geerlingguy/docker-debian11-ansible/workflows/Build/badge.svg?branch=master[CI]]
 |===
 
