@@ -29,7 +29,7 @@ name: CI (Lint + Molecule)
         description: "Select Ansible Versions to run"
         required: false
         type: choice
-        default: "ansible-5,ansible-4"
+        default: "ansible-6"
         options:
           - ansible-4,ansible-5,ansible-6
           - ansible-4,ansible-5
