@@ -20,7 +20,6 @@ name: CI (Lint + Molecule)
           - ubuntu2204
           - debian10
           - debian11
-          - centos7
           - rockylinux8
           - rockylinux9
           - fedora35
@@ -106,7 +105,6 @@ jobs:
           - ubuntu2204
           - debian10
           - debian11
-          - centos7
           - rockylinux8
           - rockylinux9
           - fedora35
