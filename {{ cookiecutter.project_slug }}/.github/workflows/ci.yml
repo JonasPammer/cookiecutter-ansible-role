@@ -13,9 +13,8 @@ name: CI (Lint + Molecule)
         description: "Select a Distribution to run"
         required: false
         type: choice
-        default: "ALL"
+        default: "ubuntu2204"
         options:
-          - ALL
           - ubuntu1804
           - ubuntu2004
           - ubuntu2204
@@ -28,6 +27,7 @@ name: CI (Lint + Molecule)
           - fedora36
           - fedora37
           - fedora38
+          - ALL
       ansible_version:
         description: "Select Ansible Versions to run"
         required: false
