@@ -97,6 +97,8 @@ jobs:
     name: Molecule
     runs-on: ubuntu-latest
     strategy:
+      # half length of matrix's distro list:
+      max-parallel: 6
       matrix:
         distro:
           - ubuntu1804
