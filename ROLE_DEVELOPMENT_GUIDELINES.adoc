@@ -50,7 +50,7 @@ apache__vhosts_version: "2.2"
 - name: stat if apache's default DocumentRoot contains a favicon at its root
   ansible.builtin.stat:
     path: /var/www/html/favicon.ico
-  register: apache2__register_stat__favicon
+  register: apache2__register_stat_favicon
 ----
 |===
 
