@@ -45,9 +45,9 @@
       labels: ["kind/dependencies", "kind/infrastructure"],
     },
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest", "pinDigest"],
-      "automerge": true
-    }
+      matchUpdateTypes: ["minor", "patch", "pin", "digest", "pinDigest"],
+      automerge: true,
+    },
   ],
   vulnerabilityAlerts: {
     labels: ["kind/dependencies", "kind/security"],
