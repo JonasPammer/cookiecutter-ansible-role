@@ -47,6 +47,10 @@
         'kind/infrastructure',
       ],
     },
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
   ],
   labels: [
     'kind/dependencies',
