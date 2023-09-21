@@ -20,20 +20,8 @@
     ':gitSignOff',
   ],
   configMigration: true,
-  lockFileMaintenance: {
-    enabled: true,
-  },
   minimumReleaseAge: '7 days',
   packageRules: [
-    {
-      matchPackagePatterns: [
-        'eslint',
-      ],
-      labels: [
-        'kind/dependencies',
-        'priority/low',
-      ],
-    },
     {
       matchDepTypes: [
         'action',
