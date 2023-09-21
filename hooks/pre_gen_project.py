@@ -25,5 +25,5 @@ assert (
 
 
 role_name_ = "{{ cookiecutter.role_name_ | default(None) }}"
-if role_name_ is not None:
+if role_name_ != "":
     print("NOTE: role_name_ can be removed from your .cruft.json file (See https://github.com/JonasPammer/cookiecutter-ansible-role/pull/40)".format(role_name_))
