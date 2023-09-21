@@ -42,6 +42,7 @@ name: CI (Lint + Molecule)
   push:
     branches:
       - master
+      - renovate/**
     paths:
       - ".github/workflows/ci.yml"
       - "defaults/*"
