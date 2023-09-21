@@ -10,7 +10,6 @@
     ":dependencyDashboard",
     ":semanticPrefixFixDepsChoreOthers",
     ":ignoreModulesAndTests",
-    ":autodetectPinVersions",
     ":prHourlyLimit2",
     ":prConcurrentLimit10",
     "group:monorepos",
