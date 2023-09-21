@@ -15,7 +15,6 @@
     'group:recommended',
     'workarounds:all',
     'schedule:quarterly',
-    ':prImmediately',
     ':semanticCommits',
     ':semanticCommitScope(deps)',
     'docker:enableMajor',
