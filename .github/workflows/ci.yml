@@ -6,6 +6,7 @@ permissions: read-all
   push:
     branches:
       - master
+      - renovate/**
     paths:
       - ".github/workflows/ci.yml"
       - ".github/cookiecutter-example.yml"

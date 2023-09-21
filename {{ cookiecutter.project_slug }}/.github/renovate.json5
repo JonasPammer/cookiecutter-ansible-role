@@ -23,6 +23,7 @@
   ],
   configMigration: true,
   minimumReleaseAge: '7 days',
+  automergeType: 'branch',
   packageRules: [
     {
       matchDepTypes: [
