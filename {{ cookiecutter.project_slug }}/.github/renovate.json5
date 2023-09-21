@@ -14,7 +14,7 @@
     'group:monorepos',
     'group:recommended',
     'workarounds:all',
-    'schedule:monthly',
+    'schedule:quarterly',
     ':prImmediately',
     ':rebaseStalePrs',
     ':semanticCommits',
