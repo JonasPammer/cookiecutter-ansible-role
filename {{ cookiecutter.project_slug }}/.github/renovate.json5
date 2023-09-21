@@ -16,7 +16,6 @@
     'workarounds:all',
     'schedule:quarterly',
     ':prImmediately',
-    ':rebaseStalePrs',
     ':semanticCommits',
     ':semanticCommitScope(deps)',
     'docker:enableMajor',
