@@ -44,15 +44,15 @@
       automerge: true,
     },
   ],
+  labels: [
+    'kind/dependencies',
+  ],
   vulnerabilityAlerts: {
     labels: [
       'kind/dependencies',
       'kind/security',
     ],
   },
-  labels: [
-    'kind/dependencies',
-  ],
   rebaseLabel: 'renovate/rebase',
   stopUpdatingLabel: 'renovate/stop-updating',
 }
