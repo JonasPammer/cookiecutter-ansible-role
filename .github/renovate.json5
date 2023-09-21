@@ -14,7 +14,6 @@
     'workarounds:all',
     'schedule:quarterly',
     ':semanticCommits',
-    ':semanticCommitScope(deps)',
     'docker:enableMajor',
     'docker:pinDigests',
     'helpers:pinGitHubActionDigests',
