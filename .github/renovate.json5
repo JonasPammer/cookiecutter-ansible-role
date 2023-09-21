@@ -18,7 +18,6 @@
     'docker:pinDigests',
     'helpers:pinGitHubActionDigests',
     ':gitSignOff',
-    ':renovatePrefix',
   ],
   configMigration: true,
   lockFileMaintenance: {
