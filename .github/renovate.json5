@@ -28,6 +28,7 @@
     {
       matchUpdateTypes: ["minor", "patch", "pin", "digest", "pinDigest"],
       automerge: true,
+      commitBody: "[skip pre-commit.ci]",
     },
   ],
   labels: ["kind/dependencies"],
