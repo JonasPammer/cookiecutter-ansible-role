@@ -48,7 +48,13 @@
       ],
     },
     {
-      matchUpdateTypes: ["minor", "patch", "pin", "digest", "pinDigest"],
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+        'pin',
+        'digest',
+        'pinDigest',
+      ],
       automerge: true,
     },
   ],
