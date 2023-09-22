@@ -5,7 +5,7 @@ galaxy_info:
   standalone: true
 
   author: "{{ cookiecutter.galaxy_name }}"
-  license: "{{ cookiecutter.open_source_license[1] }}"
+  license: "{{ cookiecutter.open_source_license }}"
 
   min_ansible_version: "{{ cookiecutter.min_ansible_version }}"
   platforms:

@@ -17,13 +17,17 @@ project_slug = "{{ cookiecutter.project_slug }}"
 
 assert (
     "{%raw%}{{{%endraw%}" not in project_slug
-), "'{}' project_slug contains {%raw%}{{{%endraw%}".format(project_slug)
+), "project_slug contains {%raw%}{{{%endraw%}! '{}'".format(project_slug)
 
 assert (
     "{%raw%}{{{%endraw%}" not in role_name
-), "'{}' role_name contains {%raw%}{{{%endraw%}".format(role_name)
+), "role_name contains {%raw%}{{{%endraw%}! '{}'".format(role_name)
 
 
 role_name_ = "{{ cookiecutter.role_name_ | default(None) }}"
-if role_name_ is not None:
-    print("NOTE: role_name_ can be removed from your .cruft.json file (See https://github.com/JonasPammer/cookiecutter-ansible-role/pull/40)".format(role_name_))
+if role_name_ != "None":
+    print(
+        "NOTE: role_name_ can be removed from your .cruft.json file "
+        "(See https://github.com/JonasPammer/cookiecutter-ansible-role/pull/40). "
+        "'{}'".format(role_name_)
+    )

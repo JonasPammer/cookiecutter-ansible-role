@@ -4,15 +4,15 @@
   "code_of_conduct_enforcement_contact_email": "opensource@jonaspammer.at",
   "github_username": "JonasPammer",
   "open_source_license": [
-    ["MIT License", "MIT"],
-    ["The Unlicense", "Unlicense"],
-    ["Boost Software License 1.0", "BSL-1.0"],
-    ["Apache License 2.0", "Apache-2.0"],
-    ["Mozilla Public License 2.0", "MPL-2.0"],
-    ["GNU LGPLv3", "LGPL-3.0"],
-    ["GNU GPLv3", "GPL-3.0"],
-    ["GNU APGLv3", "AGPL-3.0"],
-    ["Not open source", "None"]
+    "MIT",
+    "Unlicense",
+    "BSL-1.0",
+    "Apache-2.0",
+    "MPL-2.0",
+    "LGPL-3.0",
+    "GPL-3.0",
+    "AGPL-3.0",
+    "None"
   ],
 
   "galaxy_name": "jonaspammer",
@@ -23,5 +23,19 @@
 
   "role_name": null,
   "project_slug": "ansible-role-{{ cookiecutter.role_name.lower().replace(' ', '_').replace('-', '_') }}",
-  "project_short_purpose": null
+  "project_short_purpose": null,
+
+  "__prompts__": {
+    "open_source_license": {
+      "MIT": "MIT License",
+      "Unlicense": "The Unlicense",
+      "BSL-1.0": "Boost Software License 1.0",
+      "Apache-2.0": "Apache License 2.0",
+      "MPL-2.0": "Mozilla Public License 2.0",
+      "LGPL-3.0": "GNU LGPLv3",
+      "GPL-3.0": "GNU GPLv3",
+      "AGPL-3.0": "GNU APGLv3",
+      "None": "Not open source"
+    }
+  }
 }
