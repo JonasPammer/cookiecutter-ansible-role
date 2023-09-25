@@ -178,7 +178,6 @@ jobs:
           path: |
             /var/tmp/vars.yml
             /var/tmp/environment.yml
-            /var/tmp/hostvars.yml
 
       - name: setup tmate session if previous step failed and if this is a manual run
         if: {% raw %}failure() && env.WORKFLOW_DISPATCH_IF == 'true'{% endraw %}
