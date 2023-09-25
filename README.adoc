@@ -142,7 +142,7 @@ https://github.com/asciidoctor/asciidoctor-reducer[`ascidoctor-reducer`].
 =====
 For this to work, *you need to* activate the _Pages_ feature on a per-repository basis.
 
-To do so, go to the _Settings_ page of your GitHub repository. Under _Pages / Source_, select [`gh-pages`] [`/ (root)`], and click _Save_.
+To do so, go to the _Settings_ page of your GitHub repository. Under _Pages / Source_, select [`GitHub Actions`], and click _Save_.
 =====
 ====
 * Includes a Beginner-Friendly Development Documentation file
