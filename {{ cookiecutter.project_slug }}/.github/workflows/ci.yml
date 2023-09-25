@@ -39,6 +39,8 @@ name: CI (Lint + Molecule)
           - ansible-5
           - ansible-6
   pull_request:
+    branches-ignore:
+      - renovate/**
   push:
     branches:
       - master
