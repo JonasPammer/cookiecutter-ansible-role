@@ -33,15 +33,14 @@ name: CI (Lint + Molecule)
         type: choice
         default: "ansible-6"
         options:
-          - ansible-4,ansible-5,ansible-6,ansible-7,ansible-8,ansible-9
+          - ansible-4,ansible-5,ansible-6,ansible-7,ansible-8
           - ansible-4,ansible-5,ansible-6
-          - ansible-7,ansible-8,ansible-9
+          - ansible-7,ansible-8
           - ansible-4
           - ansible-5
           - ansible-6
           - ansible-7
           - ansible-8
-          - ansible-9
   pull_request:
     branches-ignore:
       - renovate/**

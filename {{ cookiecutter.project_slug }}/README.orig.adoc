@@ -257,7 +257,6 @@ As of writing this is:
 * 2.13 (Ansible 6)
 * 2.14 (Ansible 7)
 * 2.15 (Ansible 8)
-* 2.16 (Ansible 9)
 
 
 [[development]]
