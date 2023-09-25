@@ -14,7 +14,7 @@
     "group:monorepos",
     "group:recommended",
     "workarounds:all",
-    "schedule:quarterly",
+    "schedule:yearly",
     ":semanticCommits",
     "docker:enableMajor",
     "docker:pinDigests",
@@ -32,6 +32,7 @@
     {
       matchUpdateTypes: ["minor", "patch", "pin", "digest", "pinDigest"],
       automerge: true,
+      schedule: ["every 3 months on the first day of the month"],
       commitBody: "[skip pre-commit.ci]",
     },
   ],
