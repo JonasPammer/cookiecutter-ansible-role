@@ -30,9 +30,9 @@
       labels: ["kind/dependencies", "kind/infrastructure"],
     },
     {
+      schedule: ["every 3 months on the first day of the month"],
       matchUpdateTypes: ["minor", "patch", "pin", "digest", "pinDigest"],
       automerge: true,
-      schedule: ["every 3 months on the first day of the month"],
       commitBody: "[skip pre-commit.ci]",
     },
   ],
