@@ -16,7 +16,7 @@
   ],
 
   "galaxy_name": "jonaspammer",
-  "min_ansible_version": "2.11",
+  "min_ansible_version": "2.13",
   "allow_duplicates": "no",
   "ansible_user_needs_to_become": true,
   "use_renovate": false,
