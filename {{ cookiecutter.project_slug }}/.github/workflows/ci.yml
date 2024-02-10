@@ -160,6 +160,7 @@ jobs:
         run: tox
         env:
           TOX_SKIP_ENV: pre-commit
+          TOX_PARALLEL_NO_SPINNER: 1
           MOLECULE_DISTRO: {% raw %}${{ matrix.distro }}{% endraw %}
         if: github.event_name != 'workflow_dispatch'
 
@@ -168,6 +169,7 @@ jobs:
         env:
           TOXENV: py3-{% raw %}${{ github.event.inputs.ansible_version }}{% endraw %}
           TOX_SKIP_ENV: pre-commit
+          TOX_PARALLEL_NO_SPINNER: 1
           MOLECULE_DISTRO: {% raw %}${{ matrix.distro }}{% endraw %}
           MOLECULE_DESTROY: never
         if: env.WORKFLOW_DISPATCH_IF == 'true'
