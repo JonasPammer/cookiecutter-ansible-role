@@ -1,6 +1,6 @@
 = {{ cookiecutter.project_slug }}
 {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>;
-:toc:
+:toc: left
 :toclevels: 2
 :toc-placement!:
 :source-highlighter: rouge
