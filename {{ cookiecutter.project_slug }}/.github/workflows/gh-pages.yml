@@ -20,7 +20,7 @@ jobs:
     steps:
       ### Setup
       - name: check out the codebase
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: setup ruby
         uses: ruby/setup-ruby@v1
@@ -28,12 +28,12 @@ jobs:
           ruby-version: "2.7.0"
 
       - name: set up python 3
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
       - name: setup/activate pre-commit cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.cache/pre-commit
           key: "{% raw %}${{ hashFiles('.pre-commit-config.yaml') }}{% endraw %}"
@@ -89,7 +89,7 @@ jobs:
         run: echo "is_renovate=$( [[ ${GITHUB_REF#refs/heads/} != renovate/* ]] && echo false || echo true )" >> $GITHUB_OUTPUT
 
       - name: Commit generated files.
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "{% raw %}${{ env.FIRST_LINE_OF_HEAD_COMMIT_MESSAGE }}{% endraw %}\n{% raw %}${{ github.sha }}{% endraw %}"
           file_pattern: README.adoc README.md SECURITY.md
@@ -124,13 +124,13 @@ jobs:
     steps:
       ### Deploy README.adoc
       - name: download docs directory from previous job
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: docs
           path: ./docs
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v2
@@ -139,7 +139,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v3
 
       - name: docs artifact no longer needed
         uses: geekyeggo/delete-artifact@v4
