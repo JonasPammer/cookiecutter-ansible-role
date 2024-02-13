@@ -165,7 +165,7 @@ jobs:
         if: env.WORKFLOW_DISPATCH_IF == 'true'
 
       - name: Upload output of /molecule/resources/debug.yml as CI Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: {% raw %}debug-${{ matrix.distro }}.yml{% endraw %}
           path: |
