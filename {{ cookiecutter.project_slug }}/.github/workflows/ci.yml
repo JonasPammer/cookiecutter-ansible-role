@@ -52,6 +52,7 @@ name: CI (Lint + Molecule)
       - ".gitattributes"
       - ".yamllint"
       - "pyproject.toml"
+      - "requirements-dev.txt"
       - "requirements.yml"
       - "tox.ini"
   push:
