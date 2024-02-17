@@ -32,12 +32,6 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: setup/activate pre-commit cache
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pre-commit
-          key: "{% raw %}${{ hashFiles('.pre-commit-config.yaml') }}{% endraw %}"
-
       - name: install asciidoctor and other relevant ruby gems
         run: gem install --no-document asciidoctor asciidoctor-reducer rouge coderay
 
@@ -78,12 +72,6 @@ jobs:
 
           sed -i '1s|\(.*\)|<!-- \1 -->|' README.md SECURITY.md
           sed -i '1s|\(.*\)|// \1|' README.adoc
-
-      - name: pre-commit generated .md files
-        run: |
-          python3 -m pip install pre-commit
-          pre-commit run --files README.md SECURITY.md || true
-          pre-commit run --files README.md SECURITY.md || true
 
       - id: is_renovate
         run: echo "is_renovate=$( [[ ${GITHUB_REF#refs/heads/} != renovate/* ]] && echo false || echo true )" >> $GITHUB_OUTPUT
