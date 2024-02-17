@@ -42,12 +42,12 @@ name: CI (Lint + Molecule)
       - renovate/**
     paths: &paths
       - ".github/workflows/ci.yml"
-      - "defaults/*"
-      - "handlers/*"
+      - "defaults/**"
+      - "handlers/**"
       - "meta/**"
       - "molecule/**"
-      - "tasks/*"
-      - "vars/*"
+      - "tasks/**"
+      - "vars/**"
       - ".ansible-lint"
       - ".gitattributes"
       - ".yamllint"
