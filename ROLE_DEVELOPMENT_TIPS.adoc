@@ -160,8 +160,8 @@ _rolename_os_specific_var:app-name:
   Debian_9: …
 
 rolename_os_specific_var: "{{
-  _rolename_packages[ansible_distribution ~'_'~ ansible_distribution_major_version]|default(
-  rolename_packages[ansible_distribution] )|default(
+  _rolename_packages[ansible_distribution ~'_'~ ansible_distribution_major_version]\|default(
+  rolename_packages[ansible_distribution] )\|default(
   _rolename_packages[ansible_os_family] ) }}"
 ----
 
