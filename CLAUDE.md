@@ -5,6 +5,7 @@
 This is a **Cookiecutter template** for creating production-ready Ansible Roles. It generates complete role scaffolding with testing infrastructure, CI/CD pipelines, and development tooling pre-configured.
 
 **Two-Layer Architecture:**
+
 1. **Template Layer** (`/` root): The cookiecutter template itself that you develop/maintain
 2. **Generated Layer** (`{{ cookiecutter.project_slug }}/`): What users receive when they use this template
 
@@ -32,6 +33,7 @@ rolename__somevar: "{{
 **Why:** Allows OS-specific values without creating separate files per distribution, while remaining overridable despite being in `vars/` (high precedence). The lazy evaluation with Jinja2 allows playbook-level overrides.
 
 **Naming Conventions:**
+
 - `defaults/`: `rolename_varname` (single underscore)
 - `vars/`: `rolename__varname` (double underscore)
 - Registered variables: `rolename__register_modulename_varname`
@@ -39,6 +41,7 @@ rolename__somevar: "{{
 ### Pre-Generation Hook
 
 `hooks/pre_gen_project.py` validates inputs before generation:
+
 - Normalizes role names (lowercase, underscores)
 - Ensures no Jinja2 syntax remains in critical variables
 - Provides migration notes for cruft updates
@@ -106,12 +109,14 @@ CI=true tox
 ```
 
 **Supported Distributions:**
+
 - `ubuntu2004`, `ubuntu2204`
 - `debian11`, `debian12`
 - `rockylinux8`, `rockylinux9`
 - `fedora39`
 
 **Supported Ansible Versions:**
+
 - `ansible-6` (core 2.13)
 - `ansible-7` (core 2.14)
 - `ansible-8` (core 2.15)
@@ -172,6 +177,7 @@ git push origin 1.0.0
 ### Multi-Dimensional Testing Matrix
 
 Generated roles test across:
+
 - **7 distributions** (Ubuntu, Debian, Rocky Linux, Fedora)
 - **4 Ansible versions** (6, 7, 8, 9)
 - Docker-based with systemd-enabled images (`geerlingguy/docker-*-ansible`)
@@ -179,15 +185,18 @@ Generated roles test across:
 ### CI/CD Workflows (Generated Roles)
 
 **`.github/workflows/ci.yml`** - Main testing pipeline:
+
 - Runs `yamllint` on all YAML files
 - Executes Molecule tests across distribution matrix
 - Supports manual dispatch with debugging (includes tmate session on failure)
 
 **`.github/workflows/release-to-galaxy.yml`** - Publishing automation:
+
 - Triggered on git tags
 - Publishes role to Ansible Galaxy
 
 **`.github/workflows/gh-pages.yml`** - Documentation:
+
 - Generates HTML from AsciiDoc using asciidoctor-reducer
 - Publishes to GitHub Pages
 
@@ -205,11 +214,13 @@ The `gh-pages.yml` workflow automatically flattens README.orig.adoc using asciid
 ## Development Container
 
 Generated roles include `.devcontainer/devcontainer.json` for VS Code:
+
 - Docker-in-Docker support (for running Molecule)
 - Pre-configured extensions (Ansible, Python, Git)
 - Python 3.12 environment
 
 To use:
+
 1. Install VS Code + Dev Containers extension
 2. Open folder in VS Code
 3. Command: "Remote-Containers: Open Folder in Container"
@@ -217,10 +228,12 @@ To use:
 ## Key Files to Edit When Modifying Template
 
 **Template Configuration:**
+
 - `cookiecutter.json`: Template variables and prompts
 - `hooks/pre_gen_project.py`: Validation logic
 
 **Generated Role Structure:**
+
 - `{{ cookiecutter.project_slug }}/defaults/main.yml`: User-overridable variables
 - `{{ cookiecutter.project_slug }}/vars/main.yml`: OS-specific variable mappings
 - `{{ cookiecutter.project_slug }}/tasks/main.yml`: Main task execution
@@ -229,6 +242,7 @@ To use:
 - `{{ cookiecutter.project_slug }}/.github/workflows/`: CI/CD pipelines
 
 **Template Testing:**
+
 - `.github/workflows/ci.yml`: Tests the template generation itself
 - `.github/cookiecutter-example.yml`: Example config for CI
 
