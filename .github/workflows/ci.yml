@@ -22,7 +22,7 @@ jobs:
     steps:
       ### GENERIC COOKIECUTTER INITIALIZATION STEPS ###
       - name: check out the codebase
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: set up python 3
         uses: actions/setup-python@f677139bbe7f9c59b41e40162b753c062f5d49a3 # v5
